@@ -1,607 +1,1224 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional CV, portfolio and landing page website service by Web Wizard. Suitable for students, job seekers, freelancers and small businesses.">
+  <meta name="author" content="Nur Hidayah">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <title>Web Wizard | CV, Portfolio & Landing Page Website Service</title>
 
-    <title>Web Wizard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
 
-<!--
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-TemplateMo 570 Chain App Dev
+  <style>
+    :root {
+      --primary: #2f6df6;
+      --primary-dark: #174fc2;
+      --secondary: #7c3aed;
+      --dark: #14213d;
+      --text: #475569;
+      --muted: #64748b;
+      --light: #f8fbff;
+      --border: #e5ecf6;
+      --white: #ffffff;
+      --success: #18b981;
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
+      --radius: 22px;
+    }
 
-https://templatemo.com/tm-570-chain-app-dev
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
--->
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
 
-  </head>
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .section-padding {
+      padding: 90px 0;
+    }
+
+    .section-small {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-title span {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      color: var(--dark);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    .btn-brand,
+    .btn-outline-brand,
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-brand {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      box-shadow: 0 12px 25px rgba(47, 109, 246, 0.22);
+    }
+
+    .btn-brand:hover {
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(47, 109, 246, 0.30);
+    }
+
+    .btn-outline-brand {
+      color: var(--dark);
+      background: var(--white);
+      border-color: var(--border);
+    }
+
+    .btn-outline-brand:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: var(--white);
+      box-shadow: 0 12px 25px rgba(37, 211, 102, 0.22);
+    }
+
+    .btn-whatsapp:hover {
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.30);
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .navbar {
+      padding: 18px 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--dark);
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .navbar-brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: var(--text) !important;
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0 7px;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 80px;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(47, 109, 246, 0.16), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(124, 58, 237, 0.13), transparent 25%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    }
+
+    .hero h1 {
+      color: var(--dark);
+      font-size: 55px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero-points i {
+      color: var(--success);
+      margin-right: 7px;
+    }
+
+    .hero-card {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      max-width: 470px;
+      margin-left: auto;
+    }
+
+    .preview-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+
+    .browser-dots span {
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      margin-right: 5px;
+    }
+
+    .preview-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .profile-preview {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .profile-avatar {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 28px;
+    }
+
+    .profile-preview h3 {
+      color: var(--dark);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .profile-preview p {
+      font-size: 14px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .preview-section {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 17px;
+      margin-bottom: 14px;
+      background: #fbfdff;
+    }
+
+    .preview-section h4 {
+      color: var(--dark);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .mini-lines span {
+      display: block;
+      height: 8px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      margin-bottom: 8px;
+    }
+
+    .mini-lines span:nth-child(1) {
+      width: 95%;
+    }
+
+    .mini-lines span:nth-child(2) {
+      width: 72%;
+    }
+
+    .mini-lines span:nth-child(3) {
+      width: 86%;
+    }
+
+    .preview-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .preview-tags span {
+      display: inline-block;
+      padding: 7px 11px;
+      background: #eef4ff;
+      color: var(--primary);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Value cards */
+    .value-card,
+    .service-card,
+    .price-card,
+    .process-card,
+    .faq-card,
+    .addon-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.05);
+      height: 100%;
+      transition: 0.25s ease;
+    }
+
+    .value-card:hover,
+    .service-card:hover,
+    .price-card:hover,
+    .process-card:hover,
+    .addon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .value-card {
+      padding: 28px;
+    }
+
+    .icon-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background: #eef4ff;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .value-card h3,
+    .service-card h3,
+    .process-card h3,
+    .faq-card h3,
+    .addon-card h3 {
+      color: var(--dark);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .value-card p,
+    .service-card p,
+    .process-card p,
+    .faq-card p,
+    .addon-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .bg-soft {
+      background: var(--light);
+    }
+
+    /* Services */
+    .service-card {
+      padding: 32px;
+    }
+
+    .service-card ul,
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+    }
+
+    .service-card li,
+    .price-card li {
+      margin-bottom: 12px;
+      color: var(--text);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .service-card li i,
+    .price-card li i {
+      color: var(--success);
+      margin-top: 5px;
+    }
+
+    /* Pricing */
+    .price-card {
+      padding: 32px;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--primary);
+      transform: translateY(-8px);
+    }
+
+    .price-badge {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      background: #eef4ff;
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .price-card h3 {
+      color: var(--dark);
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      padding-right: 75px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 18px 0 12px;
+    }
+
+    .price strong {
+      color: var(--dark);
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .price-note {
+      color: var(--muted);
+      font-size: 14px;
+      min-height: 46px;
+      margin-bottom: 18px;
+    }
+
+    .price-card .btn-brand,
+    .price-card .btn-outline-brand {
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .pricing-note {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Process */
+    .process-card {
+      padding: 28px;
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    /* Add-ons */
+    .addon-card {
+      padding: 24px;
+    }
+
+    .addon-price {
+      color: var(--primary);
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    /* CTA */
+    .cta-box {
+      background: linear-gradient(135deg, var(--dark), #243b78);
+      border-radius: 32px;
+      padding: 54px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      right: -80px;
+      bottom: -100px;
+    }
+
+    .cta-box h2 {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* FAQ */
+    .faq-card {
+      padding: 26px;
+      margin-bottom: 18px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 70px 0 28px;
+      background: #0f172a;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer h4 {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer a:hover {
+      color: var(--white);
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .footer-logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 42px;
+      padding-top: 24px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer li {
+      margin-bottom: 9px;
+    }
+
+
+
+    /* FAQ layout fix */
+    #faq {
+      scroll-margin-top: 95px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #faq .row {
+      align-items: flex-start;
+    }
+
+    #faq .faq-card {
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 28px 32px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    #faq .faq-card:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        padding: 80px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-card {
+        margin: 45px auto 0;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+        margin-top: 24px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .section-padding {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .section-title h2,
+      .cta-box h2 {
+        font-size: 30px;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .btn-brand,
+      .btn-outline-brand,
+      .btn-whatsapp {
+        width: 100%;
+      }
+
+      .cta-box {
+        padding: 34px 24px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#top" aria-label="Web Wizard Home">
+          <img src="assets/images/logo.png" alt="Web Wizard Logo">
+          <span>Web Wizard</span>
+        </a>
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              &emsp;<img src="assets/images/logo.png" style="width: 45%;" alt="Wizard Web Business">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20a%20website%20service." target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Quotation
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
-  <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+  <!-- Hero -->
+  <main id="top" class="hero">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Welcome to my IT Web Wizard Business!</h2>
-                    <p>Show your skills with confidence! Our expert team creates captivating HTML portfolio/resume/CV websites that reflect your unique identity. From professional Business Introduction Web to dynamic Business Market Web, we leave a lasting impression. Stay connected with potential clients through integrated WhatsApp links. Explore our Event Gallery for stunning website designs. Need help with web-related assignments? 
-                      <br><br>We've got you covered with PHP and XAMPP expertise. Elevate your online presence with us!</p>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="white-button first-button scroll-to-section">
-                      <a href="https://wa.me/60125057046" target="_blank">Contact Us <i class="fab fa-whatsapp"></i></a>
-                    </div>
-                    <div class="white-button scroll-to-section">
-                      <a href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank">More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/slider-dec.png" alt="">
-              </div>
-            </div>
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-badge">
+            <i class="fas fa-magic"></i> Professional website service for your online presence
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="services" class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Amazing <em>Services &amp; Features</em> for you</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Discover our exceptional services and an array of remarkable features tailored exclusively for you</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <h4>Content Updates</h4>
-            <p>Updating website content, such as text, images, blog posts, news articles, and product descriptions.</p>
-            <div class="text-button">
-              <br><br>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <h4>Adding New Pages/Sections</h4>
-            <p>Creating new web pages or sections to accommodate new offerings or business developments</p>
-            <div class="text-button">
-              <br>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <h4>Adding Testimonials and Reviews</h4>
-            <p>Show positive feedback from customers to build trust and credibility.</p>
-            <div class="text-button">
-              <br>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item fourth-service">
-            <div class="icon"></div>
-            <h4>Fixing Bugs and Errors</h4>
-            <p>Fixing the website for any technical issues and promptly fixing them</p>
-            <div class="text-button">
-              <br><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          <h1>Simple, clean websites for <span>CV, portfolio & landing page</span>.</h1>
 
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="section-heading">
-            <h4>About <em>What We Do</em> &amp; Who We Are</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Introducing our budget-friendly business website package, designed to seamlessly connect with your audience through WhatsApp. We specialize in creating stunning online portfolios to showcase your engineering expertise. Additionally, we offer an innovative online album feature, perfect for storing and sharing your cherished images and videos. Let us help you establish a strong online presence and engage with your clients like never before!</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4>Web Development</h4>
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4>Support &amp; Help</h4>
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4>Fixing Bugs</h4>
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4>Web Maintenance</h4>
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p>Feel free to contact us!</p>
-              <div class="gradient-button">
-                <a href="https://wa.me/60125057046" target="_blank">Whatsapp Us!</a>
-              </div>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            <img src="assets/images/about-right-dec.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          <p>
+            I create responsive one-page websites for students, job seekers, freelancers and small businesses who want a professional link to share for job applications, services, products or personal branding.
+          </p>
 
-  <div id="clients" class="the-clients">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>Check What <em>The Clients Say</em> About Our Web Dev</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Don't just take our word for it! Hear what our clients have to say about our web development services:</p>
+          <div class="hero-actions">
+            <a class="btn-brand" href="#pricing">
+              View Packages <i class="fas fa-arrow-right"></i>
+            </a>
+            <a class="btn-outline-brand" href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank" rel="noopener">
+              View My Portfolio <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="grid">
-              <div class="row">
-                <div class="col-lg-7 align-self-center">
-                  <div class="menu">
-                    <div class="first-thumb active">
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Aina A.</h4>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Online Portfolio</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.8</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="first-thumb active">
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>University College.</h4>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">ERD Diagram</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">5.0</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--<div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Jake Harris Nyo</h4>
-                            <span class="date">29 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Digital Business</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.5</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>May Catherina</h4>
-                            <span class="date">27 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Business &amp; Economics</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.7</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Random User</h4>
-                            <span class="date">24 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">New App Ecosystem</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">3.9</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="last-thumb">
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Mark Amber Do</h4>
-                            <span class="date">21 November 2021</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Web Development</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.3</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>-->
-                  </div>
-                </div> 
-                <div class="col-lg-5">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <img src="assets/images/quote.png" alt="">
-                                <p>“Thankyouuu dear! You do your job so fast and great! I love my portfolio even myself don't know how to design it but you manage to make my portfolio design and function suit my self laa!”</p>
-                              </div>
-                              <div class="down-content">
-                                <img src="assets/images/avatar.png" alt="">
-                                <div class="right-content">
-                                  <h4>Aina</h4>
-                                  <span>Customer</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>          
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="pricing" class="pricing-tables">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Welcome to our business! Here, you'll find the best pre-order prices available anywhere</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM50</span>
-            <h4>Dynamic CV/Resume</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>One-page dynamic resume</li>
-              <li>5 custom links for online presence</li>
-              <li>1 image/PDF for showcasing work</li>
-              <li>Interactive map feature</li>
-              <li>Tailored add-ons available</li>
-              <li>Online link Github Pages</li>
-              <br>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/Enhanced%20CV.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
+          <ul class="hero-points">
+            <li><i class="fas fa-check-circle"></i> Mobile responsive</li>
+            <li><i class="fas fa-check-circle"></i> WhatsApp CTA</li>
+            <li><i class="fas fa-check-circle"></i> GitHub Pages hosting</li>
+            <li><i class="fas fa-check-circle"></i> Beginner-friendly process</li>
+          </ul>
         </div>
 
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM100</span>
-            <h4>Enhanced Portfolio Website</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>One-page dynamic website</li>
-              <li>Custom links</li>
-              <li>Photo Gallery</li>
-              <li>Online platform links</li>
-              <li>Detailed project descriptions</li>
-              <li>Testimonials</li>
-              <li>Hosting on Github Pages</li>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/Enhanced%20Portfolio.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM300</span>
-            <h4>Dynamic Event Gallery</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>Image and video galleries.</li>
-              <li>Detailed event descriptions.</li>
-              <li>Essential event details.</li>
-              <li>Featured photographers/videographers.</li>
-              <li>Client testimonials.</li>
-              <li>Clear call-to-action (CTA) buttons.
-              <li>Customizable with requested features.</li>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/Dynamic%20Event%20Gallery.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM350</span>
-            <h4>WhatsApp Product Website</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>Showcase products with visuals & descriptions.</li>
-              <li>Direct purchase via WhatsApp link (CTA).</li>
-              <li>Reviews, ratings & refund policy.</li>
-              <li>FAQ section for quick answers.</li>
-              <li>Responsive design for all devices.</li>
-              <li>Social proof: testimonials & case studies.</li>
-              <li>Limited edition/exclusive products.</li>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/WhatsApp%20Business%20Product%20Website.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM150</span>
-            <h4>Custom Assignment Helper</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>Complete solution for students using <b>XAMPP</b></li>
-              <li>Tailored to <b>project requirements and user capacity</b></li>
-              <li>Real-time <b>AJAX</b> interactions<li>
-              <li>Secure email notifications with <b>PHPMailer SMTP</b></li>
-              <li>Organized data management with <b>PHPMyAdmin</b></li>
-              <li>Generate professional PDF reports using <b>TCPDF</b></li>
-              <li>Customizable to suit individual <b>educational</b> needs</li>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/Custom%20Assignment%20Helper.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">RM50</span>
-            <h4>Updates & New Features</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>Seamless implementation of updates & new sections</li>
-              <li>Custom solutions based on complexity level</li>
-              <li>Enhanced functionality & user experience</li>
-              <li>Transparent pricing for update complexity</li>
-              <li>Expert web development for seamless integration</li>
-              <li>Customer satisfaction with reliable updates</li>
-              <li>Pricing tailored to scope & scale</li>
-            </ul>
-            <div class="border-button">
-              <a href="https://wa.me/60125057046" target="_blank">Purchase</a>&nbsp;<a href="assets/document/Update.pdf">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-
-  <footer id="newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>Know More About Me?</h4>
-          </div>
-        </div>
-        <div class="col-lg-6 offset-lg-3">
-          <form id="search" action="#" method="GET">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <div class="border-button">
-              <center><a href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank">Read Now <i class="fa fa-arrow-right"></i></a></center>
-            </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>Contact Us</h4>
-            <p>Ulu Tiram, Johor</p>
-            <p><a href="#">012-505 7046</a></p>
-            <p><a href="#">nurhidayah9501@gmail.com</a></p>
-          </div>
-        </div>
         <div class="col-lg-5">
-          <div class="footer-widget">
-            <h4>About My Small Business Project</h4>
-            <p>We are a dedicated IT Solutions Hub, specializing in creating captivating HTML portfolio/resume/CV websites, Business Introduction Web, and Business Market Web solutions, all with integrated WhatsApp links, while also providing expert assistance in PHP and XAMPP systems.</p>
+          <div class="hero-card">
+            <div class="preview-top">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="preview-label">Website Preview</div>
+            </div>
+
+            <div class="profile-preview">
+              <div class="profile-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <h3>Your Name / Brand</h3>
+                <p>Portfolio Website • Landing Page • Online Profile</p>
+              </div>
+            </div>
+
+            <div class="preview-section">
+              <h4>About / Introduction</h4>
+              <div class="mini-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="preview-section">
+              <h4>Key Sections</h4>
+              <div class="preview-tags">
+                <span>Skills</span>
+                <span>Projects</span>
+                <span>Services</span>
+                <span>Pricing</span>
+                <span>Contact</span>
+              </div>
+            </div>
+
+            <a class="btn-whatsapp w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20website." target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Ask for Website Service
+            </a>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-           <img src="assets/images/logo.png" style="width: 100%;" alt="Wizard Web Business">
+      </div>
+    </div>
+  </main>
+
+  <!-- Values -->
+  <section class="section-small">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="icon-circle"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Responsive Design</h3>
+            <p>Your website will look neat on phone, tablet and laptop, so it is easy to share with employers or customers.</p>
           </div>
         </div>
 
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Copyright © 2022 Chain App Dev Company. All Rights Reserved.</p>
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="icon-circle"><i class="fas fa-link"></i></div>
+            <h3>Easy to Share</h3>
+            <p>Get a professional website link that you can place in your resume, Instagram bio, LinkedIn, WhatsApp or job application.</p>
           </div>
         </div>
+
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="icon-circle"><i class="fas fa-comments"></i></div>
+            <h3>Clear Call-to-Action</h3>
+            <p>WhatsApp and contact buttons are included so visitors can reach you quickly without complicated forms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section-padding bg-soft">
+    <div class="container">
+      <div class="section-title">
+        <span>Services</span>
+        <h2>Focused website services that are easy to understand</h2>
+        <p>No complicated package. Just clean and useful websites for personal branding, portfolio sharing and simple business promotion.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="service-card">
+            <div class="icon-circle"><i class="fas fa-id-card"></i></div>
+            <h3>CV / Portfolio Website</h3>
+            <p>Suitable for students, interns, fresh graduates, job seekers and professionals who want to showcase their background online.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> About me and professional summary</li>
+              <li><i class="fas fa-check"></i> Education, experience, skills and achievements</li>
+              <li><i class="fas fa-check"></i> Project showcase or work samples</li>
+              <li><i class="fas fa-check"></i> Resume PDF button and social links</li>
+              <li><i class="fas fa-check"></i> WhatsApp, email or LinkedIn contact button</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-card">
+            <div class="icon-circle"><i class="fas fa-bullhorn"></i></div>
+            <h3>Simple Landing Page</h3>
+            <p>Suitable for small businesses, service providers, product sellers, freelancers or personal brands that need a simple sales page.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Hero section with clear offer</li>
+              <li><i class="fas fa-check"></i> Service/product explanation</li>
+              <li><i class="fas fa-check"></i> Benefits, pricing or package section</li>
+              <li><i class="fas fa-check"></i> Testimonial, FAQ or gallery section</li>
+              <li><i class="fas fa-check"></i> WhatsApp CTA for enquiries or orders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section-padding">
+    <div class="container">
+      <div class="section-title">
+        <span>Quotation</span>
+        <h2>Website packages with clear starting prices</h2>
+        <p>Prices are shown as starting rates. Final quotation depends on content, design style, number of sections and requested features.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-4">
+          <div class="price-card">
+            <span class="price-badge">Starter</span>
+            <h3>Basic CV / Portfolio</h3>
+            <div class="price"><strong>RM99</strong><span>starting</span></div>
+            <p class="price-note">Best for students, interns or fresh graduates who need a simple professional online profile.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> One-page website</li>
+              <li><i class="fas fa-check"></i> About, skills, education and contact</li>
+              <li><i class="fas fa-check"></i> Resume PDF or social links</li>
+              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
+              <li><i class="fas fa-check"></i> GitHub Pages publishing</li>
+              <li><i class="fas fa-check"></i> 1 minor revision</li>
+            </ul>
+            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Basic%20CV%20Portfolio%20Website%20package." target="_blank" rel="noopener">Ask About This</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="price-card featured">
+            <span class="price-badge">Popular</span>
+            <h3>Professional Portfolio</h3>
+            <div class="price"><strong>RM180</strong><span>starting</span></div>
+            <p class="price-note">Best for a more polished portfolio with project highlights and stronger personal branding.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> One-page polished portfolio</li>
+              <li><i class="fas fa-check"></i> Hero, about, skills and experience</li>
+              <li><i class="fas fa-check"></i> Project / achievement showcase</li>
+              <li><i class="fas fa-check"></i> Resume, LinkedIn, GitHub and WhatsApp links</li>
+              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
+              <li><i class="fas fa-check"></i> 2 minor revisions</li>
+            </ul>
+            <a class="btn-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Professional%20Portfolio%20Website%20package." target="_blank" rel="noopener">Request Quotation</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="price-card">
+            <span class="price-badge">Business</span>
+            <h3>Simple Landing Page</h3>
+            <div class="price"><strong>RM250</strong><span>starting</span></div>
+            <p class="price-note">Best for promoting a service, product, small business, event or personal brand.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> One-page landing page</li>
+              <li><i class="fas fa-check"></i> Hero, service/product and benefits</li>
+              <li><i class="fas fa-check"></i> Pricing, FAQ, testimonial or gallery section</li>
+              <li><i class="fas fa-check"></i> WhatsApp enquiry/order button</li>
+              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
+              <li><i class="fas fa-check"></i> 2 minor revisions</li>
+            </ul>
+            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Simple%20Landing%20Page%20package." target="_blank" rel="noopener">Ask About This</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="pricing-note">
+        Note: Prices do not include paid domain, paid hosting, advanced system features, payment gateway, database system or custom web application functions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Add-ons -->
+  <section class="section-padding bg-soft">
+    <div class="container">
+      <div class="section-title">
+        <span>Add-ons</span>
+        <h2>Optional add-ons for extra requests</h2>
+        <p>These add-ons help keep the package fair and transparent when the requested website needs more content or extra work.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="addon-card">
+            <h3>Extra Section</h3>
+            <p>Additional section such as gallery, FAQ, testimonial or achievement.</p>
+            <div class="addon-price">RM30+</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="addon-card">
+            <h3>Extra Page</h3>
+            <p>Additional standalone page such as project page or service detail page.</p>
+            <div class="addon-price">RM80+</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="addon-card">
+            <h3>Content Polishing</h3>
+            <p>Improve wording for about me, service description or portfolio content.</p>
+            <div class="addon-price">RM50+</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="addon-card">
+            <h3>Domain Setup</h3>
+            <p>Help connect a custom domain to the website. Domain cost is not included.</p>
+            <div class="addon-price">RM50+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section-padding">
+    <div class="container">
+      <div class="section-title">
+        <span>Process</span>
+        <h2>How the website project works</h2>
+        <p>A simple process so customers know what to prepare and what will happen before the website is published.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="process-card">
+            <div class="step-number">1</div>
+            <h3>Send Details</h3>
+            <p>Customer sends content, photo/logo, links, preferred style and website purpose.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="process-card">
+            <div class="step-number">2</div>
+            <h3>Quotation</h3>
+            <p>I confirm the package, scope, price and estimated completion based on the request.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="process-card">
+            <div class="step-number">3</div>
+            <h3>Design & Build</h3>
+            <p>The website is created based on agreed content, layout and main call-to-action.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="process-card">
+            <div class="step-number">4</div>
+            <h3>Review & Publish</h3>
+            <p>Customer reviews the website, minor revisions are applied and the site is published online.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="section-small">
+    <div class="container">
+      <div class="cta-box">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2>Need a website quotation?</h2>
+            <p>Send your website purpose, preferred package and content details. I will suggest the most suitable option based on your needs.</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="cta-actions">
+              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20a%20website.%0A%0AWebsite%20type%3A%20%0APurpose%3A%20%0AContent%20ready%3A%20%0APreferred%20budget%3A%20" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
+              </a>
+              <a class="btn-outline-brand" href="mailto:nurhidayah9501@gmail.com?subject=Website%20Service%20Quotation%20Request">
+                <i class="fas fa-envelope"></i> Email Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-padding bg-soft">
+    <div class="container">
+      <div class="section-title">
+        <span>FAQ</span>
+        <h2>Common questions before ordering</h2>
+        <p>Basic information customers usually need before requesting a website quotation.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="faq-card">
+            <h3>What do I need to prepare?</h3>
+            <p>Please prepare your name/brand, short introduction, photo or logo, contact details, social links, service details, project details or any content you want to include.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Is domain included?</h3>
+            <p>Basic publishing using GitHub Pages is included. Custom domain setup can be added, but the domain purchase fee is not included in the package price.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Can I request changes after the website is done?</h3>
+            <p>Yes. Each package includes minor revisions. Extra changes, new sections or major redesign requests may require additional charges.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Is this suitable for online portfolio or internship application?</h3>
+            <p>Yes. The CV/Portfolio package is suitable for students, interns, fresh graduates and job seekers who want a clean website link to share with employers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="footer-logo">
+            <img src="assets/images/logo.png" alt="Web Wizard Logo">
+            <span>Web Wizard</span>
+          </div>
+          <p>
+            Professional CV, portfolio and landing page website service for students, job seekers, freelancers and small businesses.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-2">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-2">
+          <h4>Services</h4>
+          <ul>
+            <li>CV Website</li>
+            <li>Portfolio Website</li>
+            <li>Landing Page</li>
+            <li>Website Update</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/60125057046" target="_blank" rel="noopener">WhatsApp: 012-505 7046</a></li>
+            <li><a href="mailto:nurhidayah9501@gmail.com">nurhidayah9501@gmail.com</a></li>
+            <li>Ulu Tiram, Johor</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p>© 2026 Web Wizard. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+
 </body>
 </html>
