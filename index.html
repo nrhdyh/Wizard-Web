@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional CV, portfolio and landing page website service by Web Wizard. Suitable for students, job seekers, freelancers and small businesses.">
+  <meta name="description" content="Affordable GitHub.io online CV and portfolio website service for students, internship seekers and fresh graduates by Web Wizard.">
   <meta name="author" content="Nur Hidayah">
 
-  <title>Web Wizard | CV, Portfolio & Landing Page Website Service</title>
+  <title>Web Wizard | GitHub.io Portfolio for Students</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,7 @@
       --border: #e5ecf6;
       --white: #ffffff;
       --success: #18b981;
+      --warning: #f59e0b;
       --shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
       --radius: 22px;
     }
@@ -70,7 +71,7 @@
     }
 
     .section-title {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto 48px;
       text-align: center;
     }
@@ -78,7 +79,7 @@
     .section-title span {
       display: inline-block;
       color: var(--primary);
-      font-weight: 700;
+      font-weight: 800;
       font-size: 13px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -108,7 +109,7 @@
       gap: 9px;
       border-radius: 999px;
       padding: 14px 24px;
-      font-weight: 700;
+      font-weight: 800;
       transition: 0.25s ease;
       border: 1px solid transparent;
       white-space: nowrap;
@@ -150,12 +151,16 @@
       box-shadow: 0 15px 30px rgba(37, 211, 102, 0.30);
     }
 
+    .bg-soft {
+      background: var(--light);
+    }
+
     /* Header */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(255, 255, 255, 0.90);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(226, 232, 240, 0.8);
     }
@@ -181,7 +186,7 @@
 
     .nav-link {
       color: var(--text) !important;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       margin: 0 7px;
     }
@@ -211,7 +216,7 @@
       border: 1px solid var(--border);
       color: var(--primary);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 22px;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
     }
@@ -234,7 +239,7 @@
     .hero p {
       font-size: 18px;
       color: var(--muted);
-      max-width: 600px;
+      max-width: 620px;
       margin-bottom: 30px;
     }
 
@@ -260,7 +265,7 @@
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text);
     }
 
@@ -300,7 +305,7 @@
 
     .preview-label {
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--muted);
     }
 
@@ -384,16 +389,36 @@
       color: var(--primary);
       border-radius: 999px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    /* Value cards */
+    .github-link-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .github-link-box i {
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    /* Cards */
     .value-card,
     .service-card,
+    .sample-card,
     .price-card,
     .process-card,
     .faq-card,
-    .addon-card {
+    .addon-card,
+    .github-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -404,14 +429,20 @@
 
     .value-card:hover,
     .service-card:hover,
+    .sample-card:hover,
     .price-card:hover,
     .process-card:hover,
-    .addon-card:hover {
+    .addon-card:hover,
+    .github-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow);
     }
 
-    .value-card {
+    .value-card,
+    .service-card,
+    .process-card,
+    .addon-card,
+    .github-card {
       padding: 28px;
     }
 
@@ -432,7 +463,8 @@
     .service-card h3,
     .process-card h3,
     .faq-card h3,
-    .addon-card h3 {
+    .addon-card h3,
+    .github-card h3 {
       color: var(--dark);
       font-size: 20px;
       font-weight: 800;
@@ -443,29 +475,23 @@
     .service-card p,
     .process-card p,
     .faq-card p,
-    .addon-card p {
+    .addon-card p,
+    .github-card p {
       color: var(--muted);
       margin-bottom: 0;
     }
 
-    .bg-soft {
-      background: var(--light);
-    }
-
-    /* Services */
-    .service-card {
-      padding: 32px;
-    }
-
     .service-card ul,
-    .price-card ul {
+    .price-card ul,
+    .github-card ul {
       list-style: none;
       padding: 0;
       margin: 22px 0 0;
     }
 
     .service-card li,
-    .price-card li {
+    .price-card li,
+    .github-card li {
       margin-bottom: 12px;
       color: var(--text);
       display: flex;
@@ -474,9 +500,521 @@
     }
 
     .service-card li i,
-    .price-card li i {
+    .price-card li i,
+    .github-card li i {
       color: var(--success);
       margin-top: 5px;
+    }
+
+
+
+    /* Samples */
+    .sample-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 24px;
+      height: 100%;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+      transition: 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sample-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .sample-card.featured-sample {
+      border: 2px solid var(--primary);
+      transform: translateY(-6px);
+    }
+
+    .sample-card.featured-sample::before {
+      content: "Most requested";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 7px 12px;
+      border-radius: 999px;
+      z-index: 5;
+      box-shadow: 0 10px 25px rgba(47, 109, 246, 0.18);
+    }
+
+    .sample-preview {
+      background:
+        radial-gradient(circle at 15% 12%, rgba(47, 109, 246, 0.12), transparent 26%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      min-height: 310px;
+    }
+
+    .sample-browser {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.86);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sample-dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      margin-right: 5px;
+    }
+
+    .sample-url {
+      background: #f1f5f9;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 6px 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 160px;
+    }
+
+    .sample-screen {
+      padding: 22px;
+    }
+
+    .mini-hero {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .sample-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      flex: 0 0 auto;
+    }
+
+    .mini-hero h4 {
+      color: var(--dark);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .mini-hero p {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .mini-section-title {
+      color: var(--dark);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    .mini-pill-row,
+    .sample-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .mini-pill-row span,
+    .sample-tags span {
+      background: #eef4ff;
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .mini-line-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .mini-line {
+      height: 8px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      margin-bottom: 8px;
+    }
+
+    .mini-line.w-95 { width: 95%; }
+    .mini-line.w-86 { width: 86%; }
+    .mini-line.w-74 { width: 74%; }
+    .mini-line.w-58 { width: 58%; }
+
+    .mini-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .mini-info-card,
+    .mini-project-card,
+    .mini-timeline-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .mini-info-card strong,
+    .mini-project-card strong,
+    .mini-timeline-item strong {
+      color: var(--dark);
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .mini-info-card span,
+    .mini-project-card span,
+    .mini-timeline-item span {
+      color: var(--muted);
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .mini-project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .mini-code-card {
+      background: #0f172a;
+      color: #dbeafe;
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 12px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .mini-code-card .code-blue { color: #93c5fd; }
+    .mini-code-card .code-green { color: #86efac; }
+    .mini-code-card .code-purple { color: #c4b5fd; }
+
+    .mini-timeline {
+      display: grid;
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+
+    .mini-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .mini-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      margin-top: 4px;
+      flex: 0 0 auto;
+    }
+
+    .mini-cta-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .mini-cta-row span {
+      flex: 1;
+      text-align: center;
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      background: #eef4ff;
+      color: var(--primary);
+    }
+
+    .mini-cta-row span.primary-mini {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+    }
+
+    .sample-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .sample-card h3 {
+      color: var(--dark);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+
+    .sample-type {
+      color: var(--primary);
+      background: #eef4ff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .sample-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .sample-details {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .sample-details li {
+      color: var(--text);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .sample-details li i {
+      color: var(--success);
+      margin-top: 4px;
+    }
+
+    .sample-note {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 575px) {
+      .sample-card.featured-sample {
+        transform: none;
+      }
+
+      .sample-preview {
+        min-height: auto;
+      }
+
+      .sample-url {
+        max-width: 125px;
+      }
+
+      .mini-project-grid,
+      .mini-split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+
+    /* Sample magic enhancements */
+    .sample-benefit-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: -18px 0 34px;
+    }
+
+    .sample-benefit-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+    }
+
+    .sample-benefit-item i {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: #eef4ff;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .sample-benefit-item strong {
+      display: block;
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .sample-benefit-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .sample-magic-line {
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, rgba(47, 109, 246, 0.09), rgba(124, 58, 237, 0.08));
+      border: 1px solid rgba(47, 109, 246, 0.15);
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .sample-magic-line i {
+      color: var(--primary);
+      margin-right: 7px;
+    }
+
+    .sample-mini-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .sample-quick-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+
+    .sample-quick-info div {
+      border: 1px solid var(--border);
+      background: #fbfdff;
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+
+    .sample-quick-info small {
+      display: block;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .sample-quick-info strong {
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .mini-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 13px;
+    }
+
+    .mini-stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .mini-stat strong {
+      color: var(--dark);
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 1px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .mini-feature-strip {
+      background: #eef4ff;
+      color: var(--primary);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .mini-feature-strip i {
+      margin-right: 6px;
+    }
+
+    .sample-note strong {
+      color: var(--dark);
+    }
+
+    @media (max-width: 991px) {
+      .sample-benefit-bar {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Pricing */
@@ -526,7 +1064,7 @@
 
     .price span {
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .price-note {
@@ -549,11 +1087,64 @@
       font-size: 14px;
     }
 
-    /* Process */
-    .process-card {
-      padding: 28px;
+    /* GitHub setup */
+    .github-demo {
+      background: #0f172a;
+      color: var(--white);
+      border-radius: 26px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      height: 100%;
     }
 
+    .github-demo h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .github-demo p {
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 22px;
+    }
+
+    .link-example {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .link-example small {
+      color: rgba(255, 255, 255, 0.58);
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .link-example strong {
+      font-size: 18px;
+      color: var(--white);
+      word-break: break-all;
+    }
+
+    .warning-box {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fffbeb;
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    .warning-box i {
+      color: #fbbf24;
+      margin-right: 7px;
+    }
+
+    /* Process */
     .step-number {
       width: 44px;
       height: 44px;
@@ -565,11 +1156,6 @@
       justify-content: center;
       font-weight: 800;
       margin-bottom: 18px;
-    }
-
-    /* Add-ons */
-    .addon-card {
-      padding: 24px;
     }
 
     .addon-price {
@@ -621,9 +1207,26 @@
     }
 
     /* FAQ */
+    #faq {
+      scroll-margin-top: 95px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #faq .row {
+      align-items: flex-start;
+    }
+
     .faq-card {
-      padding: 26px;
+      padding: 28px 32px;
       margin-bottom: 18px;
+      display: block;
+      height: auto !important;
+      min-height: 0 !important;
+    }
+
+    .faq-card:last-child {
+      margin-bottom: 0;
     }
 
     /* Footer */
@@ -680,31 +1283,6 @@
 
     .footer li {
       margin-bottom: 9px;
-    }
-
-
-
-    /* FAQ layout fix */
-    #faq {
-      scroll-margin-top: 95px;
-      position: relative;
-      z-index: 1;
-    }
-
-    #faq .row {
-      align-items: flex-start;
-    }
-
-    #faq .faq-card {
-      height: auto !important;
-      min-height: 0 !important;
-      padding: 28px 32px;
-      margin-bottom: 18px;
-      display: block;
-    }
-
-    #faq .faq-card:last-child {
-      margin-bottom: 0;
     }
 
     @media (max-width: 991px) {
@@ -780,12 +1358,14 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#samples">Samples</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#github-setup">GitHub.io Setup</a></li>
             <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
             <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20a%20website%20service." target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> Get Quotation
+              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Start My Portfolio
               </a>
             </li>
           </ul>
@@ -800,18 +1380,18 @@
       <div class="row align-items-center">
         <div class="col-lg-7">
           <div class="hero-badge">
-            <i class="fas fa-magic"></i> Professional website service for your online presence
+            <i class="fab fa-github"></i> Affordable GitHub.io portfolio for students
           </div>
 
-          <h1>Simple, clean websites for <span>CV, portfolio & landing page</span>.</h1>
+          <h1>Online CV & portfolio for <span>internship applications</span>.</h1>
 
           <p>
-            I create responsive one-page websites for students, job seekers, freelancers and small businesses who want a professional link to share for job applications, services, products or personal branding.
+            I create simple, clean and mobile-friendly online CV / portfolio websites for students, internship seekers and fresh graduates using GitHub Pages. Turn your resume into a clickable first impression that you can place in your resume, LinkedIn profile, internship form, job application or email signature.
           </p>
 
           <div class="hero-actions">
             <a class="btn-brand" href="#pricing">
-              View Packages <i class="fas fa-arrow-right"></i>
+              View Student Packages <i class="fas fa-arrow-right"></i>
             </a>
             <a class="btn-outline-brand" href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank" rel="noopener">
               View My Portfolio <i class="fas fa-external-link-alt"></i>
@@ -819,10 +1399,11 @@
           </div>
 
           <ul class="hero-points">
+            <li><i class="fas fa-check-circle"></i> GitHub.io link</li>
+            <li><i class="fas fa-check-circle"></i> No monthly hosting fee</li>
             <li><i class="fas fa-check-circle"></i> Mobile responsive</li>
-            <li><i class="fas fa-check-circle"></i> WhatsApp CTA</li>
-            <li><i class="fas fa-check-circle"></i> GitHub Pages hosting</li>
-            <li><i class="fas fa-check-circle"></i> Beginner-friendly process</li>
+            <li><i class="fas fa-check-circle"></i> Beginner-friendly setup</li>
+            <li><i class="fas fa-check-circle"></i> Resume glow-up</li>
           </ul>
         </div>
 
@@ -832,19 +1413,24 @@
               <div class="browser-dots">
                 <span></span><span></span><span></span>
               </div>
-              <div class="preview-label">Website Preview</div>
+              <div class="preview-label">Student Portfolio Preview</div>
+            </div>
+
+            <div class="github-link-box">
+              <i class="fab fa-github"></i>
+              <span>yourusername.github.io</span>
             </div>
 
             <div class="profile-preview">
-              <div class="profile-avatar"><i class="fas fa-user"></i></div>
+              <div class="profile-avatar"><i class="fas fa-user-graduate"></i></div>
               <div>
-                <h3>Your Name / Brand</h3>
-                <p>Portfolio Website • Landing Page • Online Profile</p>
+                <h3>Your Name</h3>
+                <p>Student • Internship Seeker • Fresh Graduate</p>
               </div>
             </div>
 
             <div class="preview-section">
-              <h4>About / Introduction</h4>
+              <h4>About Me / Online CV</h4>
               <div class="mini-lines">
                 <span></span>
                 <span></span>
@@ -853,18 +1439,18 @@
             </div>
 
             <div class="preview-section">
-              <h4>Key Sections</h4>
+              <h4>Portfolio Sections</h4>
               <div class="preview-tags">
+                <span>Education</span>
                 <span>Skills</span>
                 <span>Projects</span>
-                <span>Services</span>
-                <span>Pricing</span>
+                <span>Resume</span>
                 <span>Contact</span>
               </div>
             </div>
 
-            <a class="btn-whatsapp w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20website." target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Ask for Website Service
+            <a class="btn-whatsapp w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20create%20a%20GitHub.io%20portfolio%20for%20student%2Finternship%20application." target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Ask for Student Portfolio
             </a>
           </div>
         </div>
@@ -878,9 +1464,9 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="value-card">
-            <div class="icon-circle"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Responsive Design</h3>
-            <p>Your website will look neat on phone, tablet and laptop, so it is easy to share with employers or customers.</p>
+            <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
+            <h3>Better Than Resume Only</h3>
+            <p>Show your profile, skills, projects and resume in one clean online link that employers can open easily.</p>
           </div>
         </div>
 
@@ -888,15 +1474,15 @@
           <div class="value-card">
             <div class="icon-circle"><i class="fas fa-link"></i></div>
             <h3>Easy to Share</h3>
-            <p>Get a professional website link that you can place in your resume, Instagram bio, LinkedIn, WhatsApp or job application.</p>
+            <p>Add your GitHub.io portfolio link to your resume, LinkedIn, WhatsApp bio, email signature or internship form.</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="value-card">
-            <div class="icon-circle"><i class="fas fa-comments"></i></div>
-            <h3>Clear Call-to-Action</h3>
-            <p>WhatsApp and contact buttons are included so visitors can reach you quickly without complicated forms.</p>
+            <div class="icon-circle"><i class="fas fa-wallet"></i></div>
+            <h3>Student-Friendly</h3>
+            <p>Suitable for students who want a professional online presence without paid hosting or monthly website fees.</p>
           </div>
         </div>
       </div>
@@ -908,37 +1494,49 @@
     <div class="container">
       <div class="section-title">
         <span>Services</span>
-        <h2>Focused website services that are easy to understand</h2>
-        <p>No complicated package. Just clean and useful websites for personal branding, portfolio sharing and simple business promotion.</p>
+        <h2>Focused portfolio services for students</h2>
+        <p>Simple online CV and portfolio websites designed for students, internship seekers and fresh graduates who need a professional link for applications.</p>
       </div>
 
       <div class="row g-4">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="service-card">
             <div class="icon-circle"><i class="fas fa-id-card"></i></div>
-            <h3>CV / Portfolio Website</h3>
-            <p>Suitable for students, interns, fresh graduates, job seekers and professionals who want to showcase their background online.</p>
+            <h3>Online CV</h3>
+            <p>Suitable for students who need a simple profile link to support internship or job applications.</p>
             <ul>
-              <li><i class="fas fa-check"></i> About me and professional summary</li>
-              <li><i class="fas fa-check"></i> Education, experience, skills and achievements</li>
-              <li><i class="fas fa-check"></i> Project showcase or work samples</li>
-              <li><i class="fas fa-check"></i> Resume PDF button and social links</li>
-              <li><i class="fas fa-check"></i> WhatsApp, email or LinkedIn contact button</li>
+              <li><i class="fas fa-check"></i> About Me and short profile</li>
+              <li><i class="fas fa-check"></i> Education and skills section</li>
+              <li><i class="fas fa-check"></i> Resume download button</li>
+              <li><i class="fas fa-check"></i> Email, LinkedIn or WhatsApp link</li>
             </ul>
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="service-card">
-            <div class="icon-circle"><i class="fas fa-bullhorn"></i></div>
-            <h3>Simple Landing Page</h3>
-            <p>Suitable for small businesses, service providers, product sellers, freelancers or personal brands that need a simple sales page.</p>
+            <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
+            <h3>Student Portfolio</h3>
+            <p>Best for internship seekers and fresh graduates who want to showcase projects and skills online.</p>
             <ul>
-              <li><i class="fas fa-check"></i> Hero section with clear offer</li>
-              <li><i class="fas fa-check"></i> Service/product explanation</li>
-              <li><i class="fas fa-check"></i> Benefits, pricing or package section</li>
-              <li><i class="fas fa-check"></i> Testimonial, FAQ or gallery section</li>
-              <li><i class="fas fa-check"></i> WhatsApp CTA for enquiries or orders</li>
+              <li><i class="fas fa-check"></i> Profile, education and skills</li>
+              <li><i class="fas fa-check"></i> 1 to 3 project showcases</li>
+              <li><i class="fas fa-check"></i> GitHub, LinkedIn and resume links</li>
+              <li><i class="fas fa-check"></i> Mobile-friendly design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="service-card">
+            <div class="icon-circle"><i class="fas fa-star"></i></div>
+            <h3>Project Portfolio Plus</h3>
+            <p>Suitable for IT, data, design, business or final-year students with multiple projects or achievements.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> More polished portfolio layout</li>
+              <li><i class="fas fa-check"></i> 3 to 5 project showcases</li>
+              <li><i class="fas fa-check"></i> Achievement or certificate section</li>
+              <li><i class="fas fa-check"></i> GitHub.io setup guidance</li>
             </ul>
           </div>
         </div>
@@ -946,116 +1544,484 @@
     </div>
   </section>
 
+
+
+  <!-- Samples -->
+  <section id="samples" class="section-padding">
+    <div class="container">
+      <div class="section-title">
+        <span>Samples</span>
+        <h2>Choose a portfolio style that makes your profile look ready</h2>
+        <p>Your portfolio is not just a link. It is a clean first impression that helps people see your background, skills, projects and contact details faster than a normal PDF resume.</p>
+      </div>
+
+      <div class="sample-benefit-bar">
+        <div class="sample-benefit-item">
+          <i class="fas fa-bolt"></i>
+          <div>
+            <strong>One link, many uses</strong>
+            <span>Place it in your resume, LinkedIn, email signature, internship form or WhatsApp bio.</span>
+          </div>
+        </div>
+        <div class="sample-benefit-item">
+          <i class="fas fa-gem"></i>
+          <div>
+            <strong>Looks more prepared</strong>
+            <span>A simple GitHub.io portfolio can make your application feel more organized and serious.</span>
+          </div>
+        </div>
+        <div class="sample-benefit-item">
+          <i class="fab fa-github"></i>
+          <div>
+            <strong>Student-friendly setup</strong>
+            <span>No monthly hosting fee, no password sharing, and published under your own GitHub username.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-4">
+          <div class="sample-card">
+            <div class="sample-preview">
+              <div class="sample-browser">
+                <div class="sample-dots"><span></span><span></span><span></span></div>
+                <div class="sample-url">name.github.io</div>
+              </div>
+
+              <div class="sample-screen">
+                <div class="sample-mini-label"><i class="fas fa-star"></i> Simple but professional</div>
+                <div class="mini-hero">
+                  <div class="sample-avatar"><i class="fas fa-user-graduate"></i></div>
+                  <div>
+                    <h4>Nur Aisyah</h4>
+                    <p>Business Student • Online CV</p>
+                  </div>
+                </div>
+
+                <div class="mini-feature-strip"><i class="fas fa-magic"></i> Turn a normal resume into a clean shareable profile.</div>
+
+                <div class="mini-line-block">
+                  <div class="mini-section-title">Professional Summary</div>
+                  <div class="mini-line w-95"></div>
+                  <div class="mini-line w-86"></div>
+                  <div class="mini-line w-58"></div>
+                </div>
+
+                <div class="mini-split">
+                  <div class="mini-info-card">
+                    <strong>Education</strong>
+                    <span>Course, university<br>and current year</span>
+                  </div>
+                  <div class="mini-info-card">
+                    <strong>Resume</strong>
+                    <span>Download CV<br>+ contact button</span>
+                  </div>
+                </div>
+
+                <div class="mini-stat-row">
+                  <div class="mini-stat"><strong>4</strong><span>Sections</span></div>
+                  <div class="mini-stat"><strong>CV</strong><span>Button</span></div>
+                  <div class="mini-stat"><strong>Link</strong><span>Ready</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sample-header-row">
+              <h3>Basic Online CV</h3>
+              <span class="sample-type">Clean</span>
+            </div>
+
+            <div class="sample-magic-line">
+              <i class="fas fa-wand-magic-sparkles"></i> Perfect if you want something simple, neat and easy to send when someone asks, “Can I see your CV?”
+            </div>
+
+            <div class="sample-quick-info">
+              <div>
+                <small>Best for</small>
+                <strong>Students who need a clean online CV without too many project details.</strong>
+              </div>
+              <div>
+                <small>First impression</small>
+                <strong>Minimal, organized, readable and not overwhelming.</strong>
+              </div>
+            </div>
+
+            <ul class="sample-details">
+              <li><i class="fas fa-check"></i> Includes About, Education, Skills, Resume and Contact</li>
+              <li><i class="fas fa-check"></i> Suitable for resume link, LinkedIn profile and internship form</li>
+              <li><i class="fas fa-check"></i> Good for students from business, admin, education or general fields</li>
+            </ul>
+
+            <a class="btn-outline-brand w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Basic%20Online%20CV%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
+              I Want This Style <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sample-card featured-sample">
+            <div class="sample-preview">
+              <div class="sample-browser">
+                <div class="sample-dots"><span></span><span></span><span></span></div>
+                <div class="sample-url">studentdev.github.io</div>
+              </div>
+
+              <div class="sample-screen">
+                <div class="sample-mini-label"><i class="fas fa-fire"></i> Project glow-up</div>
+                <div class="mini-hero">
+                  <div class="sample-avatar"><i class="fas fa-laptop-code"></i></div>
+                  <div>
+                    <h4>IT / Data Portfolio</h4>
+                    <p>Projects • Skills • GitHub</p>
+                  </div>
+                </div>
+
+                <div class="mini-code-card">
+                  <div><span class="code-purple">const</span> student = {</div>
+                  <div>&nbsp;&nbsp;field: <span class="code-green">"Data Science"</span>,</div>
+                  <div>&nbsp;&nbsp;projects: <span class="code-blue">["Dashboard", "Web App", "AI"]</span>,</div>
+                  <div>&nbsp;&nbsp;status: <span class="code-green">"Internship Ready"</span></div>
+                  <div>}</div>
+                </div>
+
+                <div class="mini-feature-strip"><i class="fas fa-sparkles"></i> Make your assignments look like real portfolio work.</div>
+
+                <div class="mini-section-title">Featured Projects</div>
+                <div class="mini-project-grid">
+                  <div class="mini-project-card">
+                    <strong>FYP System</strong>
+                    <span>Web app + dashboard + features</span>
+                  </div>
+                  <div class="mini-project-card">
+                    <strong>Data Project</strong>
+                    <span>EDA + charts + insights</span>
+                  </div>
+                </div>
+
+                <div class="mini-pill-row">
+                  <span>Python</span>
+                  <span>SQL</span>
+                  <span>React</span>
+                  <span>GitHub</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sample-header-row">
+              <h3>IT / Data Student Portfolio</h3>
+              <span class="sample-type">Popular</span>
+            </div>
+
+            <div class="sample-magic-line">
+              <i class="fas fa-wand-magic-sparkles"></i> Your projects deserve more than screenshots in a PDF. This style helps them look structured, clickable and internship-ready.
+            </div>
+
+            <div class="sample-quick-info">
+              <div>
+                <small>Best for</small>
+                <strong>IT, Computer Science, Data Science, Software, AI or dashboard project students.</strong>
+              </div>
+              <div>
+                <small>First impression</small>
+                <strong>Technical, confident, project-focused and more developer-like.</strong>
+              </div>
+            </div>
+
+            <ul class="sample-details">
+              <li><i class="fas fa-check"></i> Highlights 1–3 projects with title, description, tech stack and buttons</li>
+              <li><i class="fas fa-check"></i> Suitable for GitHub link, live demo link, FYP, dashboard or web system</li>
+              <li><i class="fas fa-check"></i> Helps employers quickly understand what you can build</li>
+            </ul>
+
+            <a class="btn-brand w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20IT%20%2F%20Data%20Student%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AProject%20I%20want%20to%20showcase%3A%20" target="_blank" rel="noopener">
+              I Want This Style <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sample-card">
+            <div class="sample-preview">
+              <div class="sample-browser">
+                <div class="sample-dots"><span></span><span></span><span></span></div>
+                <div class="sample-url">internname.github.io</div>
+              </div>
+
+              <div class="sample-screen">
+                <div class="sample-mini-label"><i class="fas fa-briefcase"></i> Application-ready</div>
+                <div class="mini-hero">
+                  <div class="sample-avatar"><i class="fas fa-briefcase"></i></div>
+                  <div>
+                    <h4>Internship Profile</h4>
+                    <p>Ready for internship application</p>
+                  </div>
+                </div>
+
+                <div class="mini-feature-strip"><i class="fas fa-paper-plane"></i> Look prepared before the interview even starts.</div>
+
+                <div class="mini-timeline">
+                  <div class="mini-timeline-item">
+                    <span class="mini-dot"></span>
+                    <div>
+                      <strong>Career Objective</strong>
+                      <span>Short statement for internship role</span>
+                    </div>
+                  </div>
+                  <div class="mini-timeline-item">
+                    <span class="mini-dot"></span>
+                    <div>
+                      <strong>Academic Background</strong>
+                      <span>Course, university and semester</span>
+                    </div>
+                  </div>
+                  <div class="mini-timeline-item">
+                    <span class="mini-dot"></span>
+                    <div>
+                      <strong>Relevant Strengths</strong>
+                      <span>Skills, tools and project highlights</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mini-cta-row">
+                  <span class="primary-mini">Download CV</span>
+                  <span>Contact Me</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sample-header-row">
+              <h3>Internship Portfolio</h3>
+              <span class="sample-type">Formal</span>
+            </div>
+
+            <div class="sample-magic-line">
+              <i class="fas fa-wand-magic-sparkles"></i> A neat profile page that makes your internship application look more complete, polished and easy to review.
+            </div>
+
+            <div class="sample-quick-info">
+              <div>
+                <small>Best for</small>
+                <strong>Final-year students, fresh graduates and internship seekers from any course.</strong>
+              </div>
+              <div>
+                <small>First impression</small>
+                <strong>Formal, clear, employer-friendly and ready to share.</strong>
+              </div>
+            </div>
+
+            <ul class="sample-details">
+              <li><i class="fas fa-check"></i> Focuses on objective, education, skills, project highlights and contact</li>
+              <li><i class="fas fa-check"></i> Good for internship emails, resume QR code, LinkedIn and application forms</li>
+              <li><i class="fas fa-check"></i> Helps your profile look more complete even if you are still a student</li>
+            </ul>
+
+            <a class="btn-outline-brand w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Internship%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AInternship%20field%3A%20" target="_blank" rel="noopener">
+              I Want This Style <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="sample-note">
+        <strong>Small link, big first impression.</strong> These are sample styles for reference only. Final portfolio content will be customized based on your course, resume, skills and project materials.
+      </p>
+    </div>
+  </section>
+
+
   <!-- Pricing -->
   <section id="pricing" class="section-padding">
     <div class="container">
       <div class="section-title">
-        <span>Quotation</span>
-        <h2>Website packages with clear starting prices</h2>
-        <p>Prices are shown as starting rates. Final quotation depends on content, design style, number of sections and requested features.</p>
+        <span>Packages</span>
+        <h2>Student-friendly GitHub.io portfolio packages</h2>
+        <p>All packages use GitHub Pages publishing with a GitHub.io link. No monthly hosting fee is required.</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-4">
           <div class="price-card">
-            <span class="price-badge">Starter</span>
-            <h3>Basic CV / Portfolio</h3>
-            <div class="price"><strong>RM99</strong><span>starting</span></div>
-            <p class="price-note">Best for students, interns or fresh graduates who need a simple professional online profile.</p>
+            <span class="price-badge">Basic</span>
+            <h3>Basic Online CV</h3>
+            <div class="price"><strong>RM49</strong><span>promo</span></div>
+            <p class="price-note">Best for students who need a simple online CV link.</p>
             <ul>
-              <li><i class="fas fa-check"></i> One-page website</li>
-              <li><i class="fas fa-check"></i> About, skills, education and contact</li>
-              <li><i class="fas fa-check"></i> Resume PDF or social links</li>
-              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
-              <li><i class="fas fa-check"></i> GitHub Pages publishing</li>
+              <li><i class="fas fa-check"></i> One-page online CV</li>
+              <li><i class="fas fa-check"></i> About Me section</li>
+              <li><i class="fas fa-check"></i> Education section</li>
+              <li><i class="fas fa-check"></i> Skills section</li>
+              <li><i class="fas fa-check"></i> Resume download button</li>
+              <li><i class="fas fa-check"></i> Contact links</li>
+              <li><i class="fas fa-check"></i> Mobile-friendly layout</li>
+              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
               <li><i class="fas fa-check"></i> 1 minor revision</li>
             </ul>
-            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Basic%20CV%20Portfolio%20Website%20package." target="_blank" rel="noopener">Ask About This</a>
+            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Basic%20Online%20CV%20package%20%28RM49%29." target="_blank" rel="noopener">Ask About This</a>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="price-card featured">
             <span class="price-badge">Popular</span>
-            <h3>Professional Portfolio</h3>
-            <div class="price"><strong>RM180</strong><span>starting</span></div>
-            <p class="price-note">Best for a more polished portfolio with project highlights and stronger personal branding.</p>
+            <h3>Student Portfolio</h3>
+            <div class="price"><strong>RM89</strong><span>promo</span></div>
+            <p class="price-note">Best for internship seekers and fresh graduates.</p>
             <ul>
-              <li><i class="fas fa-check"></i> One-page polished portfolio</li>
-              <li><i class="fas fa-check"></i> Hero, about, skills and experience</li>
-              <li><i class="fas fa-check"></i> Project / achievement showcase</li>
-              <li><i class="fas fa-check"></i> Resume, LinkedIn, GitHub and WhatsApp links</li>
-              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
-              <li><i class="fas fa-check"></i> 2 minor revisions</li>
+              <li><i class="fas fa-check"></i> One-page student portfolio</li>
+              <li><i class="fas fa-check"></i> About Me section</li>
+              <li><i class="fas fa-check"></i> Education section</li>
+              <li><i class="fas fa-check"></i> Skills section</li>
+              <li><i class="fas fa-check"></i> 1 to 3 project showcases</li>
+              <li><i class="fas fa-check"></i> Resume download button</li>
+              <li><i class="fas fa-check"></i> LinkedIn, GitHub, email or WhatsApp link</li>
+              <li><i class="fas fa-check"></i> Basic GitHub setup guidance</li>
+              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
+              <li><i class="fas fa-check"></i> 1 minor revision</li>
             </ul>
-            <a class="btn-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Professional%20Portfolio%20Website%20package." target="_blank" rel="noopener">Request Quotation</a>
+            <a class="btn-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Student%20Portfolio%20package%20%28RM89%29.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AResume%20ready%3A%20" target="_blank" rel="noopener">Start This Package</a>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="price-card">
-            <span class="price-badge">Business</span>
-            <h3>Simple Landing Page</h3>
-            <div class="price"><strong>RM250</strong><span>starting</span></div>
-            <p class="price-note">Best for promoting a service, product, small business, event or personal brand.</p>
+            <span class="price-badge">Plus</span>
+            <h3>Project Portfolio Plus</h3>
+            <div class="price"><strong>RM129</strong><span>promo</span></div>
+            <p class="price-note">Best for students with multiple projects or achievements.</p>
             <ul>
-              <li><i class="fas fa-check"></i> One-page landing page</li>
-              <li><i class="fas fa-check"></i> Hero, service/product and benefits</li>
-              <li><i class="fas fa-check"></i> Pricing, FAQ, testimonial or gallery section</li>
-              <li><i class="fas fa-check"></i> WhatsApp enquiry/order button</li>
-              <li><i class="fas fa-check"></i> Mobile responsive layout</li>
+              <li><i class="fas fa-check"></i> More polished portfolio layout</li>
+              <li><i class="fas fa-check"></i> About Me section</li>
+              <li><i class="fas fa-check"></i> Education section</li>
+              <li><i class="fas fa-check"></i> Skills section</li>
+              <li><i class="fas fa-check"></i> 3 to 5 project showcases</li>
+              <li><i class="fas fa-check"></i> Achievement or certificate section</li>
+              <li><i class="fas fa-check"></i> Resume download button</li>
+              <li><i class="fas fa-check"></i> Basic GitHub setup guidance</li>
+              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
               <li><i class="fas fa-check"></i> 2 minor revisions</li>
             </ul>
-            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20ask%20about%20the%20Simple%20Landing%20Page%20package." target="_blank" rel="noopener">Ask About This</a>
+            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Project%20Portfolio%20Plus%20package%20%28RM129%29." target="_blank" rel="noopener">Ask About This</a>
           </div>
         </div>
       </div>
 
       <p class="pricing-note">
-        Note: Prices do not include paid domain, paid hosting, advanced system features, payment gateway, database system or custom web application functions.
+        Note: Prices do not include paid domain, paid hosting, database system, login system, payment gateway or custom web application features.
       </p>
     </div>
   </section>
 
+  <!-- GitHub.io Setup -->
+  <section id="github-setup" class="section-padding bg-soft">
+    <div class="container">
+      <div class="section-title">
+        <span>GitHub.io Setup</span>
+        <h2>How your GitHub.io portfolio link works</h2>
+        <p>The portfolio will be published under your own GitHub account, so the final link follows your GitHub username.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="github-demo">
+            <h3>Your own portfolio link</h3>
+            <p>If your GitHub username is professional and simple, your portfolio link will look clean and easy to share.</p>
+
+            <div class="link-example">
+              <small>GitHub username</small>
+              <strong>aisyahazmi</strong>
+            </div>
+
+            <div class="link-example">
+              <small>Portfolio link</small>
+              <strong>https://aisyahazmi.github.io</strong>
+            </div>
+
+            <div class="warning-box">
+              <i class="fas fa-shield-alt"></i>
+              No password sharing is required. You only add me as a collaborator for portfolio setup.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="github-card">
+                <div class="icon-circle"><i class="fas fa-user-plus"></i></div>
+                <h3>1. Create GitHub Account</h3>
+                <p>You create your own GitHub account using a professional username.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="github-card">
+                <div class="icon-circle"><i class="fas fa-folder-plus"></i></div>
+                <h3>2. Create Repository</h3>
+                <p>Create a repository named exactly like your username.github.io.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="github-card">
+                <div class="icon-circle"><i class="fas fa-user-cog"></i></div>
+                <h3>3. Add Collaborator</h3>
+                <p>Add me as a collaborator so I can upload and set up your portfolio files.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="github-card">
+                <div class="icon-circle"><i class="fas fa-rocket"></i></div>
+                <h3>4. Portfolio Goes Live</h3>
+                <p>Your online CV / portfolio will be published using your own GitHub.io link.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Add-ons -->
-  <section class="section-padding bg-soft">
+  <section class="section-padding">
     <div class="container">
       <div class="section-title">
         <span>Add-ons</span>
         <h2>Optional add-ons for extra requests</h2>
-        <p>These add-ons help keep the package fair and transparent when the requested website needs more content or extra work.</p>
+        <p>Add-ons help keep the package fair if the portfolio needs more content, extra changes or future updates.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="addon-card">
-            <h3>Extra Section</h3>
-            <p>Additional section such as gallery, FAQ, testimonial or achievement.</p>
-            <div class="addon-price">RM30+</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="addon-card">
-            <h3>Extra Page</h3>
-            <p>Additional standalone page such as project page or service detail page.</p>
-            <div class="addon-price">RM80+</div>
+            <h3>Extra Project</h3>
+            <p>Add more project showcase beyond the selected package limit.</p>
+            <div class="addon-price">RM15+</div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="addon-card">
             <h3>Content Polishing</h3>
-            <p>Improve wording for about me, service description or portfolio content.</p>
-            <div class="addon-price">RM50+</div>
+            <p>Improve wording for About Me, project description or profile summary.</p>
+            <div class="addon-price">RM30+</div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="addon-card">
-            <h3>Domain Setup</h3>
-            <p>Help connect a custom domain to the website. Domain cost is not included.</p>
-            <div class="addon-price">RM50+</div>
+            <h3>Resume Touch-up</h3>
+            <p>Minor resume wording or layout improvement before adding it to the portfolio.</p>
+            <div class="addon-price">RM30+</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="addon-card">
+            <h3>Future Update</h3>
+            <p>Update content later such as new project, new resume or new contact link.</p>
+            <div class="addon-price">RM20+</div>
           </div>
         </div>
       </div>
@@ -1063,44 +2029,44 @@
   </section>
 
   <!-- Process -->
-  <section id="process" class="section-padding">
+  <section id="process" class="section-padding bg-soft">
     <div class="container">
       <div class="section-title">
         <span>Process</span>
-        <h2>How the website project works</h2>
-        <p>A simple process so customers know what to prepare and what will happen before the website is published.</p>
+        <h2>Simple process from inquiry to live portfolio</h2>
+        <p>The process is beginner-friendly, especially for students who are not familiar with GitHub.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="process-card">
             <div class="step-number">1</div>
-            <h3>Send Details</h3>
-            <p>Customer sends content, photo/logo, links, preferred style and website purpose.</p>
+            <h3>Choose Package</h3>
+            <p>Share your purpose, course/field and portfolio needs. I will suggest the most suitable package.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="process-card">
             <div class="step-number">2</div>
-            <h3>Quotation</h3>
-            <p>I confirm the package, scope, price and estimated completion based on the request.</p>
+            <h3>Deposit & Content</h3>
+            <p>A 50% deposit is required before starting. Then you send resume, profile, skills, projects and links.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="process-card">
             <div class="step-number">3</div>
-            <h3>Design & Build</h3>
-            <p>The website is created based on agreed content, layout and main call-to-action.</p>
+            <h3>GitHub Setup</h3>
+            <p>You create your GitHub account and add me as a collaborator. I will guide the setup step by step.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="process-card">
             <div class="step-number">4</div>
-            <h3>Review & Publish</h3>
-            <p>Customer reviews the website, minor revisions are applied and the site is published online.</p>
+            <h3>Build & Publish</h3>
+            <p>I design, upload and publish your portfolio. After review and revision, final handover will be given.</p>
           </div>
         </div>
       </div>
@@ -1113,15 +2079,15 @@
       <div class="cta-box">
         <div class="row align-items-center">
           <div class="col-lg-7">
-            <h2>Need a website quotation?</h2>
-            <p>Send your website purpose, preferred package and content details. I will suggest the most suitable option based on your needs.</p>
+            <h2>Ready to create your student portfolio?</h2>
+            <p>Send your preferred package, course/field and purpose. I will suggest the best option for your internship or job application needs.</p>
           </div>
           <div class="col-lg-5">
             <div class="cta-actions">
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20would%20like%20to%20request%20a%20quotation%20for%20a%20website.%0A%0AWebsite%20type%3A%20%0APurpose%3A%20%0AContent%20ready%3A%20%0APreferred%20budget%3A%20" target="_blank" rel="noopener">
+              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
                 <i class="fab fa-whatsapp"></i> WhatsApp Me
               </a>
-              <a class="btn-outline-brand" href="mailto:nurhidayah9501@gmail.com?subject=Website%20Service%20Quotation%20Request">
+              <a class="btn-outline-brand" href="mailto:nurhidayah9501@gmail.com?subject=GitHub.io%20Student%20Portfolio%20Request&body=Hi%20Dayah%2C%0A%0AI%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%0APurpose%3A%0ACourse%2Ffield%3A%0AResume%20ready%3A%0A%0AThank%20you.">
                 <i class="fas fa-envelope"></i> Email Me
               </a>
             </div>
@@ -1137,29 +2103,44 @@
       <div class="section-title">
         <span>FAQ</span>
         <h2>Common questions before ordering</h2>
-        <p>Basic information customers usually need before requesting a website quotation.</p>
+        <p>Basic information students usually ask before creating a GitHub.io portfolio.</p>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-lg-9">
           <div class="faq-card">
+            <h3>Do I need a GitHub account?</h3>
+            <p>Yes. You need your own GitHub account so the portfolio link can use your own username, such as yourusername.github.io.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Do I need to share my GitHub password?</h3>
+            <p>No. You do not need to share your password. You only add me as a collaborator to help upload and set up the portfolio files.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Is there any monthly hosting fee?</h3>
+            <p>No. The portfolio will be published using GitHub Pages, so there is no monthly hosting fee for this package.</p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Can I use the link in my resume or internship application?</h3>
+            <p>Yes. You can add the GitHub.io link to your resume, LinkedIn profile, email signature, internship form or job application.</p>
+          </div>
+
+          <div class="faq-card">
             <h3>What do I need to prepare?</h3>
-            <p>Please prepare your name/brand, short introduction, photo or logo, contact details, social links, service details, project details or any content you want to include.</p>
+            <p>Please prepare your resume PDF, short profile, education details, skills list, project details, project screenshots if available, contact links and preferred design style.</p>
           </div>
 
           <div class="faq-card">
-            <h3>Is domain included?</h3>
-            <p>Basic publishing using GitHub Pages is included. Custom domain setup can be added, but the domain purchase fee is not included in the package price.</p>
+            <h3>Can I update my portfolio later?</h3>
+            <p>Yes. Future updates can be requested as an add-on, such as adding new projects, updating resume files, changing profile details or adding new links.</p>
           </div>
 
           <div class="faq-card">
-            <h3>Can I request changes after the website is done?</h3>
-            <p>Yes. Each package includes minor revisions. Extra changes, new sections or major redesign requests may require additional charges.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Is this suitable for online portfolio or internship application?</h3>
-            <p>Yes. The CV/Portfolio package is suitable for students, interns, fresh graduates and job seekers who want a clean website link to share with employers.</p>
+            <h3>Is this suitable for systems with login or database?</h3>
+            <p>No. This package is for static online CV and portfolio websites only. It does not include login systems, databases, payment gateways or advanced web application functions.</p>
           </div>
         </div>
       </div>
@@ -1176,7 +2157,7 @@
             <span>Web Wizard</span>
           </div>
           <p>
-            Professional CV, portfolio and landing page website service for students, job seekers, freelancers and small businesses.
+            Affordable GitHub.io online CV and portfolio website service for students, internship seekers and fresh graduates.
           </p>
         </div>
 
@@ -1184,19 +2165,21 @@
           <h4>Menu</h4>
           <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#samples">Samples</a></li>
+            <li><a href="#pricing">Packages</a></li>
+            <li><a href="#github-setup">GitHub.io Setup</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
 
         <div class="col-md-4 col-lg-2">
-          <h4>Services</h4>
+          <h4>Packages</h4>
           <ul>
-            <li>CV Website</li>
-            <li>Portfolio Website</li>
-            <li>Landing Page</li>
-            <li>Website Update</li>
+            <li>Basic Online CV</li>
+            <li>Student Portfolio</li>
+            <li>Project Portfolio Plus</li>
+            <li>Future Updates</li>
           </ul>
         </div>
 
