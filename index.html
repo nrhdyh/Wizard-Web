@@ -1,2241 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Affordable GitHub.io online CV and portfolio website service for students, internship seekers and fresh graduates by Web Wizard.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="Web Wizard by Nur Hidayah. Thoughtfully designed online CVs and student portfolios, published on your own GitHub.io link. Explore sample styles and promo packages from RM49.">
   <meta name="author" content="Nur Hidayah">
-
-  <title>Web Wizard | GitHub.io Portfolio for Students</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+  <title>Web Wizard | Your Story. One Beautiful Link.</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <!-- Standalone page. Keep assets/images/logo.png in your existing website folder. -->
   <style>
-    :root {
-      --primary: #2f6df6;
-      --primary-dark: #174fc2;
-      --secondary: #7c3aed;
-      --dark: #14213d;
-      --text: #475569;
-      --muted: #64748b;
-      --light: #f8fbff;
-      --border: #e5ecf6;
-      --white: #ffffff;
-      --success: #18b981;
-      --warning: #f59e0b;
-      --shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
-      --radius: 22px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .section-padding {
-      padding: 90px 0;
-    }
-
-    .section-small {
-      padding: 65px 0;
-    }
-
-    .section-title {
-      max-width: 780px;
-      margin: 0 auto 48px;
-      text-align: center;
-    }
-
-    .section-title span {
-      display: inline-block;
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .section-title h2 {
-      color: var(--dark);
-      font-size: 38px;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 0;
-    }
-
-    .btn-brand,
-    .btn-outline-brand,
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border-radius: 999px;
-      padding: 14px 24px;
-      font-weight: 800;
-      transition: 0.25s ease;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-
-    .btn-brand {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      box-shadow: 0 12px 25px rgba(47, 109, 246, 0.22);
-    }
-
-    .btn-brand:hover {
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(47, 109, 246, 0.30);
-    }
-
-    .btn-outline-brand {
-      color: var(--dark);
-      background: var(--white);
-      border-color: var(--border);
-    }
-
-    .btn-outline-brand:hover {
-      color: var(--primary);
-      border-color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background: #25d366;
-      color: var(--white);
-      box-shadow: 0 12px 25px rgba(37, 211, 102, 0.22);
-    }
-
-    .btn-whatsapp:hover {
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.30);
-    }
-
-    .bg-soft {
-      background: var(--light);
-    }
-
-    /* Header */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-    }
-
-    .navbar {
-      padding: 18px 0;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--dark);
-      font-weight: 800;
-      font-size: 22px;
-    }
-
-    .navbar-brand img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-    }
-
-    .nav-link {
-      color: var(--text) !important;
-      font-weight: 700;
-      font-size: 15px;
-      margin: 0 7px;
-    }
-
-    .nav-link:hover {
-      color: var(--primary) !important;
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 105px 0 80px;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(47, 109, 246, 0.16), transparent 28%),
-        radial-gradient(circle at 90% 10%, rgba(124, 58, 237, 0.13), transparent 25%),
-        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 15px;
-      border-radius: 999px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 22px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-    }
-
-    .hero h1 {
-      color: var(--dark);
-      font-size: 55px;
-      line-height: 1.08;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .hero-points li {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .hero-points i {
-      color: var(--success);
-      margin-right: 7px;
-    }
-
-    .hero-card {
-      position: relative;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      max-width: 470px;
-      margin-left: auto;
-    }
-
-    .preview-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 22px;
-    }
-
-    .browser-dots span {
-      display: inline-block;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: #e2e8f0;
-      margin-right: 5px;
-    }
-
-    .preview-label {
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--muted);
-    }
-
-    .profile-preview {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .profile-avatar {
-      width: 62px;
-      height: 62px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #dbeafe, #ede9fe);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 28px;
-    }
-
-    .profile-preview h3 {
-      color: var(--dark);
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 3px;
-    }
-
-    .profile-preview p {
-      font-size: 14px;
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .preview-section {
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 17px;
-      margin-bottom: 14px;
-      background: #fbfdff;
-    }
-
-    .preview-section h4 {
-      color: var(--dark);
-      font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .mini-lines span {
-      display: block;
-      height: 8px;
-      border-radius: 999px;
-      background: #e2e8f0;
-      margin-bottom: 8px;
-    }
-
-    .mini-lines span:nth-child(1) {
-      width: 95%;
-    }
-
-    .mini-lines span:nth-child(2) {
-      width: 72%;
-    }
-
-    .mini-lines span:nth-child(3) {
-      width: 86%;
-    }
-
-    .preview-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .preview-tags span {
-      display: inline-block;
-      padding: 7px 11px;
-      background: #eef4ff;
-      color: var(--primary);
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .github-link-box {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #0f172a;
-      color: rgba(255, 255, 255, 0.9);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 16px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .github-link-box i {
-      color: #ffffff;
-      font-size: 20px;
-    }
-
-    /* Cards */
-    .value-card,
-    .service-card,
-    .sample-card,
-    .price-card,
-    .process-card,
-    .faq-card,
-    .addon-card,
-    .github-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.05);
-      height: 100%;
-      transition: 0.25s ease;
-    }
-
-    .value-card:hover,
-    .service-card:hover,
-    .sample-card:hover,
-    .price-card:hover,
-    .process-card:hover,
-    .addon-card:hover,
-    .github-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .value-card,
-    .service-card,
-    .process-card,
-    .addon-card,
-    .github-card {
-      padding: 28px;
-    }
-
-    .icon-circle {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      background: #eef4ff;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    .value-card h3,
-    .service-card h3,
-    .process-card h3,
-    .faq-card h3,
-    .addon-card h3,
-    .github-card h3 {
-      color: var(--dark);
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .value-card p,
-    .service-card p,
-    .process-card p,
-    .faq-card p,
-    .addon-card p,
-    .github-card p {
-      color: var(--muted);
-      margin-bottom: 0;
-    }
-
-    .service-card ul,
-    .price-card ul,
-    .github-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 22px 0 0;
-    }
-
-    .service-card li,
-    .price-card li,
-    .github-card li {
-      margin-bottom: 12px;
-      color: var(--text);
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .service-card li i,
-    .price-card li i,
-    .github-card li i {
-      color: var(--success);
-      margin-top: 5px;
-    }
-
-
-
-    /* Samples */
-    .sample-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 24px;
-      height: 100%;
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
-      transition: 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sample-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .sample-card.featured-sample {
-      border: 2px solid var(--primary);
-      transform: translateY(-6px);
-    }
-
-    .sample-card.featured-sample::before {
-      content: "Most requested";
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 800;
-      padding: 7px 12px;
-      border-radius: 999px;
-      z-index: 5;
-      box-shadow: 0 10px 25px rgba(47, 109, 246, 0.18);
-    }
-
-    .sample-preview {
-      background:
-        radial-gradient(circle at 15% 12%, rgba(47, 109, 246, 0.12), transparent 26%),
-        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      overflow: hidden;
-      margin-bottom: 22px;
-      min-height: 310px;
-    }
-
-    .sample-browser {
-      padding: 13px 16px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.86);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .sample-dots span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #cbd5e1;
-      margin-right: 5px;
-    }
-
-    .sample-url {
-      background: #f1f5f9;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-      border-radius: 999px;
-      padding: 6px 10px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 160px;
-    }
-
-    .sample-screen {
-      padding: 22px;
-    }
-
-    .mini-hero {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .sample-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #dbeafe, #ede9fe);
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 23px;
-      flex: 0 0 auto;
-    }
-
-    .mini-hero h4 {
-      color: var(--dark);
-      font-size: 17px;
-      font-weight: 800;
-      margin-bottom: 2px;
-    }
-
-    .mini-hero p {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .mini-section-title {
-      color: var(--dark);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 10px;
-    }
-
-    .mini-pill-row,
-    .sample-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .mini-pill-row span,
-    .sample-tags span {
-      background: #eef4ff;
-      color: var(--primary);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .mini-line-block {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 14px;
-    }
-
-    .mini-line {
-      height: 8px;
-      border-radius: 999px;
-      background: #e2e8f0;
-      margin-bottom: 8px;
-    }
-
-    .mini-line.w-95 { width: 95%; }
-    .mini-line.w-86 { width: 86%; }
-    .mini-line.w-74 { width: 74%; }
-    .mini-line.w-58 { width: 58%; }
-
-    .mini-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .mini-info-card,
-    .mini-project-card,
-    .mini-timeline-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 12px;
-    }
-
-    .mini-info-card strong,
-    .mini-project-card strong,
-    .mini-timeline-item strong {
-      color: var(--dark);
-      display: block;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .mini-info-card span,
-    .mini-project-card span,
-    .mini-timeline-item span {
-      color: var(--muted);
-      display: block;
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    .mini-project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 14px 0;
-    }
-
-    .mini-code-card {
-      background: #0f172a;
-      color: #dbeafe;
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 12px;
-      font-family: Consolas, Monaco, monospace;
-      font-size: 11px;
-      line-height: 1.8;
-    }
-
-    .mini-code-card .code-blue { color: #93c5fd; }
-    .mini-code-card .code-green { color: #86efac; }
-    .mini-code-card .code-purple { color: #c4b5fd; }
-
-    .mini-timeline {
-      display: grid;
-      gap: 9px;
-      margin-bottom: 14px;
-    }
-
-    .mini-timeline-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .mini-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--primary);
-      margin-top: 4px;
-      flex: 0 0 auto;
-    }
-
-    .mini-cta-row {
-      display: flex;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .mini-cta-row span {
-      flex: 1;
-      text-align: center;
-      border-radius: 999px;
-      padding: 8px 10px;
-      font-size: 11px;
-      font-weight: 800;
-      background: #eef4ff;
-      color: var(--primary);
-    }
-
-    .mini-cta-row span.primary-mini {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-    }
-
-    .sample-header-row {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .sample-card h3 {
-      color: var(--dark);
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 0;
-    }
-
-    .sample-type {
-      color: var(--primary);
-      background: #eef4ff;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 11px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .sample-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .sample-details {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px;
-      border-top: 1px solid var(--border);
-      padding-top: 16px;
-    }
-
-    .sample-details li {
-      color: var(--text);
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .sample-details li i {
-      color: var(--success);
-      margin-top: 4px;
-    }
-
-    .sample-note {
-      margin-top: 28px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 14px;
-    }
-
-    @media (max-width: 575px) {
-      .sample-card.featured-sample {
-        transform: none;
-      }
-
-      .sample-preview {
-        min-height: auto;
-      }
-
-      .sample-url {
-        max-width: 125px;
-      }
-
-      .mini-project-grid,
-      .mini-split {
-        grid-template-columns: 1fr;
-      }
-    }
-
-
-
-    /* Sample magic enhancements */
-    .sample-benefit-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin: -18px 0 34px;
-    }
-
-    .sample-benefit-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 16px 18px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
-    }
-
-    .sample-benefit-item i {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      background: #eef4ff;
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-    }
-
-    .sample-benefit-item strong {
-      display: block;
-      color: var(--dark);
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 2px;
-    }
-
-    .sample-benefit-item span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .sample-magic-line {
-      border-radius: 18px;
-      padding: 14px 16px;
-      background: linear-gradient(135deg, rgba(47, 109, 246, 0.09), rgba(124, 58, 237, 0.08));
-      border: 1px solid rgba(47, 109, 246, 0.15);
-      color: var(--dark);
-      font-size: 14px;
-      font-weight: 800;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-
-    .sample-magic-line i {
-      color: var(--primary);
-      margin-right: 7px;
-    }
-
-    .sample-mini-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 10px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 7px 11px;
-      color: var(--primary);
-      font-size: 11px;
-      font-weight: 800;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
-    }
-
-    .sample-quick-info {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin: 0 0 18px;
-    }
-
-    .sample-quick-info div {
-      border: 1px solid var(--border);
-      background: #fbfdff;
-      border-radius: 16px;
-      padding: 12px 14px;
-    }
-
-    .sample-quick-info small {
-      display: block;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: 10px;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .sample-quick-info strong {
-      color: var(--dark);
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.45;
-    }
-
-    .mini-stat-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 13px;
-    }
-
-    .mini-stat {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 10px 8px;
-      text-align: center;
-    }
-
-    .mini-stat strong {
-      color: var(--dark);
-      display: block;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 1px;
-    }
-
-    .mini-stat span {
-      color: var(--muted);
-      display: block;
-      font-size: 10px;
-      font-weight: 700;
-    }
-
-    .mini-feature-strip {
-      background: #eef4ff;
-      color: var(--primary);
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-size: 11px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .mini-feature-strip i {
-      margin-right: 6px;
-    }
-
-    .sample-note strong {
-      color: var(--dark);
-    }
-
-    @media (max-width: 991px) {
-      .sample-benefit-bar {
-        grid-template-columns: 1fr;
-      }
-    }
-
-
-
-    .sample-actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .sample-actions .btn-outline-brand,
-    .sample-actions .btn-brand,
-    .sample-actions .btn-whatsapp {
-      width: 100%;
-    }
-
-    .sample-actions .btn-whatsapp {
-      padding: 12px 20px;
-    }
-
-    /* Pricing */
-    .price-card {
-      padding: 32px;
-      position: relative;
-    }
-
-    .price-card.featured {
-      border: 2px solid var(--primary);
-      transform: translateY(-8px);
-    }
-
-    .price-badge {
-      position: absolute;
-      top: 22px;
-      right: 22px;
-      background: #eef4ff;
-      color: var(--primary);
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .price-card h3 {
-      color: var(--dark);
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      padding-right: 75px;
-    }
-
-    .price {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin: 18px 0 12px;
-    }
-
-    .price strong {
-      color: var(--dark);
-      font-size: 42px;
-      line-height: 1;
-      font-weight: 800;
-    }
-
-    .price span {
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .price-note {
-      color: var(--muted);
-      font-size: 14px;
-      min-height: 46px;
-      margin-bottom: 18px;
-    }
-
-    .price-card .btn-brand,
-    .price-card .btn-outline-brand {
-      width: 100%;
-      margin-top: 16px;
-    }
-
-    .pricing-note {
-      margin-top: 28px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* GitHub setup */
-    .github-demo {
-      background: #0f172a;
-      color: var(--white);
-      border-radius: 26px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-      height: 100%;
-    }
-
-    .github-demo h3 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .github-demo p {
-      color: rgba(255, 255, 255, 0.72);
-      margin-bottom: 22px;
-    }
-
-    .link-example {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 18px;
-      padding: 18px;
-      margin-bottom: 16px;
-    }
-
-    .link-example small {
-      color: rgba(255, 255, 255, 0.58);
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 700;
-    }
-
-    .link-example strong {
-      font-size: 18px;
-      color: var(--white);
-      word-break: break-all;
-    }
-
-    .warning-box {
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.25);
-      color: #fffbeb;
-      border-radius: 18px;
-      padding: 16px;
-      font-size: 14px;
-      margin-top: 18px;
-    }
-
-    .warning-box i {
-      color: #fbbf24;
-      margin-right: 7px;
-    }
-
-    /* Process */
-    .step-number {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .addon-price {
-      color: var(--primary);
-      font-weight: 800;
-      margin-top: 12px;
-    }
-
-    /* CTA */
-    .cta-box {
-      background: linear-gradient(135deg, var(--dark), #243b78);
-      border-radius: 32px;
-      padding: 54px;
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-box::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      right: -80px;
-      bottom: -100px;
-    }
-
-    .cta-box h2 {
-      font-size: 38px;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .cta-box p {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 17px;
-      margin-bottom: 0;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* FAQ */
-    #faq {
-      scroll-margin-top: 95px;
-      position: relative;
-      z-index: 1;
-    }
-
-    #faq .row {
-      align-items: flex-start;
-    }
-
-    .faq-card {
-      padding: 28px 32px;
-      margin-bottom: 18px;
-      display: block;
-      height: auto !important;
-      min-height: 0 !important;
-    }
-
-    .faq-card:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 70px 0 28px;
-      background: #0f172a;
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .footer h4 {
-      color: var(--white);
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .footer a {
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .footer a:hover {
-      color: var(--white);
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-      font-weight: 800;
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    .footer-logo img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      margin-top: 42px;
-      padding-top: 24px;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.55);
-    }
-
-    .footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer li {
-      margin-bottom: 9px;
-    }
-
-    @media (max-width: 991px) {
-      .hero {
-        padding: 80px 0 60px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero-card {
-        margin: 45px auto 0;
-      }
-
-      .price-card.featured {
-        transform: none;
-      }
-
-      .cta-actions {
-        justify-content: flex-start;
-        margin-top: 24px;
-      }
-    }
-
-    @media (max-width: 575px) {
-      .section-padding {
-        padding: 70px 0;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .section-title h2,
-      .cta-box h2 {
-        font-size: 30px;
-      }
-
-      .hero-actions,
-      .cta-actions {
-        flex-direction: column;
-      }
-
-      .btn-brand,
-      .btn-outline-brand,
-      .btn-whatsapp {
-        width: 100%;
-      }
-
-      .cta-box {
-        padding: 34px 24px;
-      }
+    :root { --cream:#faf7f0; --paper:#fffdf8; --navy:#192e49; --navy-dark:#12243a; --ink:#263b54; --muted:#5b6877; --line:#dfdfd8; --sand:#eee6d6; --sage:#e8eee8; --soft-navy:#eaf0f6; --max:1160px; --header:80px; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:110px; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif; font-size:15px; font-weight:400; line-height:1.75; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4,p { margin:0; } h1,h2,h3,h4 { font-weight:400; line-height:1.2; }
+    a { color:inherit; text-decoration:none; } button,input { font:inherit; } button { cursor:pointer; }
+    strong,b { font-weight:500; } img { display:block; max-width:100%; } [hidden] { display:none !important; }
+    a,button,summary { -webkit-tap-highlight-color:transparent; } :focus-visible { outline:3px solid #617c9f; outline-offset:5px; }
+    ::selection { background:var(--navy); color:var(--cream); }
+    .container { width:min(var(--max),calc(100% - 80px)); margin-inline:auto; }
+    .icon { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex:0 0 auto; vertical-align:middle; }
+    .svg-defs { position:absolute; width:0; height:0; overflow:hidden; }
+    .serif { font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.035em; }
+    .skip-link { position:fixed; top:-100px; left:20px; z-index:100; background:var(--navy); color:var(--cream); padding:12px 20px; border-radius:8px; }
+    .skip-link:focus { top:10px; }
+    .site-header { position:sticky; top:0; z-index:40; background:rgba(250,247,240,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(15px); }
+    .header-inner { min-height:var(--header); display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { display:flex; align-items:center; gap:11px; flex:0 0 auto; }
+    .brand-mark { width:39px; height:39px; display:grid; place-items:center; position:relative; border:1px solid #c9cfcf; border-radius:11px; background:var(--paper); }
+    .brand-mark span { font-family:Georgia,serif; font-size:17px; letter-spacing:-.08em; color:var(--navy); }
+    .brand-mark img { width:31px; height:31px; object-fit:contain; position:absolute; z-index:2; }
+    .brand-name { color:var(--navy); font-size:18px; letter-spacing:-.04em; font-weight:500; line-height:1.35; }
+    .brand-name small { display:block; font-size:8px; letter-spacing:.16em; text-transform:uppercase; font-weight:400; color:var(--muted); margin-top:3px; }
+    .main-nav { display:flex; align-items:center; gap:28px; }
+    .nav-link { font-size:12px; color:var(--muted); padding:11px 0; position:relative; }
+    .nav-link:hover,.nav-link[aria-current] { color:var(--navy); }
+    .nav-link[aria-current]::after { content:''; height:1px; background:var(--navy); position:absolute; left:0; right:0; bottom:5px; }
+    .btn { min-height:46px; display:inline-flex; align-items:center; justify-content:center; gap:11px; border-radius:8px; padding:12px 18px; font-size:12px; font-weight:500; line-height:1.5; border:1px solid transparent; transition:background .2s,border-color .2s,transform .2s; }
+    .btn .icon { width:16px; height:16px; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-navy { background:var(--navy); color:var(--cream); } .btn-navy:hover { background:#284564; }
+    .btn-outline { border-color:#c7cecf; background:transparent; color:var(--navy); } .btn-outline:hover { background:var(--paper); border-color:#6f849a; }
+    .btn-cream { background:var(--cream); color:var(--navy); } .btn-cream:hover { background:#eee6d6; }
+    .header-cta { min-height:40px; padding:10px 15px; }
+    .menu-toggle { display:none; width:44px; height:44px; align-items:center; justify-content:center; background:var(--paper); color:var(--navy); border:1px solid var(--line); border-radius:9px; }
+    .hero { padding:76px 0 73px; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1.05fr 1.1fr; gap:64px; align-items:center; }
+    .eyebrow { font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:9px; margin-bottom:18px; font-weight:500; }
+    .eyebrow .icon { color:var(--navy); width:15px; height:15px; }
+    .hero h1 { font-size:clamp(42px,4.6vw,65px); color:var(--navy); letter-spacing:-.06em; line-height:1.1; margin-bottom:26px; font-weight:500; }
+    .hero h1 em { font-family:Georgia,"Times New Roman",serif; font-weight:400; color:#435c79; letter-spacing:-.04em; }
+    .hero-magic { position:relative; display:inline-block; padding-bottom:9px; }
+    .hero-magic > svg { position:absolute; left:0; bottom:-3px; width:100%; height:13px; stroke:#a98b5e; fill:none; stroke-width:2; }
+    .hero-lead { color:var(--muted); font-size:15px; line-height:1.9; max-width:490px; }
+    .hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:20px; margin:29px 0 21px; }
+    .text-link { display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--navy); font-weight:500; padding-block:5px; }
+    .text-link .icon { width:16px; height:16px; transition:transform .2s; }
+    .text-link:hover .icon { transform:translate(2px,-2px); }
+    .hero-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; font-size:11px; color:var(--muted); }
+    .hero-meta > span { border:1px solid #d9d7cc; padding:4px 11px; border-radius:99px; color:var(--navy); background:var(--paper); }
+    .creator-link { margin-top:30px; font-size:11px; color:var(--muted); }
+    .creator-link a { color:var(--navy); text-decoration:underline; text-decoration-color:#b6bfc6; text-underline-offset:4px; }
+    .hero-art { position:relative; padding:28px 0 35px; }
+    .hero-art::before { position:absolute; content:''; inset:-4px -22px 14px 16px; background:var(--sand); border-radius:43% 57% 33% 28%; transform:rotate(-4deg); z-index:0; }
+    .hero-art::after { position:absolute; content:''; top:22px; right:3px; bottom:111px; left:3px; border:1px solid #b7c7d3; border-radius:17px; background:var(--soft-navy); transform:rotate(4deg); z-index:0; }
+    .hero-spark { position:absolute; top:-7px; right:-24px; color:#94784b; z-index:3; width:44px; height:44px; }
+    .hero-spark .icon { width:44px; height:44px; stroke-width:1; }
+    .browser-card { position:relative; z-index:2; background:var(--paper); border:1px solid #c6d1d4; border-radius:15px; overflow:hidden; box-shadow:0 24px 50px rgba(34,46,59,.1); transform:rotate(-1.5deg); transition:transform .3s,box-shadow .3s; }
+    .hero-art:hover .browser-card,.hero-art:focus-within .browser-card { transform:rotate(0); box-shadow:0 26px 55px rgba(34,46,59,.13); }
+    .preview-sticker { position:absolute; z-index:3; left:-16px; top:17px; padding:7px 12px; border:1px solid #b8c8d4; background:var(--paper); color:var(--navy); font-size:10px; border-radius:99px; transform:rotate(-5deg); display:flex; align-items:center; gap:6px; box-shadow:0 5px 12px rgba(34,46,59,.04); }
+    .preview-sticker .icon { width:13px; height:13px; }
+    .preview-foot { position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:13px; padding-inline:3px; }
+    .preview-foot > span { font-size:9px; color:var(--muted); }
+    .preview-foot .text-link { font-size:10px; }
+    .browser-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:35px; padding:9px 14px; border-bottom:1px solid #dcdfdb; background:#f6f5ef; color:#66707b; font-size:8px; }
+    .browser-bar > .icon { width:10px; height:10px; }
+    .browser-dots { display:flex; gap:4px; } .browser-dots i { width:5px; height:5px; border:1px solid #b7bebf; border-radius:50%; }
+    .hero-art .browser-bar { min-height:42px; font-size:9px; }
+    .hero-art .mini-site { min-height:435px; padding:35px; }
+    .hero-art .mini-project-visual { display:none; }
+    .hero-art .mini-name { font-size:36px; }
+    .hero-art .mini-cv > p { font-size:24px; }
+    .hero-art .mini-name span { font-size:10px; }
+    .hero-art .mini-two strong { font-size:12px; }
+    .hero-art .mini-two small { font-size:9px; }
+    .preview-caption { display:flex; justify-content:space-between; gap:12px; align-items:center; margin:24px 0 0; position:relative; z-index:2; padding-inline:3px; }
+    .preview-caption > span { font-size:9px; color:var(--muted); }
+    .preview-tabs { display:flex; gap:6px; }
+    .preview-tabs button { border:1px solid #c5c8bf; color:var(--muted); background:var(--paper); font-size:11px; min-height:44px; padding:9px 13px; border-radius:99px; transition:background .2s,border-color .2s; }
+    .preview-tabs button:hover { border-color:#6b839d; background:#f0f3ed; }
+    .preview-tabs button[aria-selected="true"] { color:var(--cream); background:var(--navy); border-color:var(--navy); }
+    .mini-site { min-height:275px; padding:24px; font-size:10px; color:var(--navy); line-height:1.5; overflow:hidden; }
+    .mini-cv { background:#eef0e7; }
+    .mini-kicker { font-size:8px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px; opacity:.85; }
+    .mini-name { font-family:Georgia,serif; font-size:30px; line-height:1.1; letter-spacing:-.03em; font-weight:400; }
+    .mini-name span { display:block; font-family:"Segoe UI",sans-serif; font-size:8px; letter-spacing:0; margin-top:8px; color:#566473; line-height:1.5; }
+    .mini-cv > p { font-family:Georgia,serif; font-size:19px; letter-spacing:-.03em; margin-top:17px; line-height:1.3; }
+    .mini-lines { display:flex; flex-direction:column; gap:5px; margin:13px 0 17px; }
+    .mini-lines i { height:3px; background:#c7d0c6; border-radius:4px; width:95%; }
+    .mini-lines i:nth-child(2) { width:87%; } .mini-lines i:nth-child(3) { width:65%; }
+    .mini-two { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .mini-two > div { border:1px solid #c6cec4; padding:12px; border-radius:7px; }
+    .mini-two span { display:block; color:#697460; font-size:8px; margin-bottom:9px; }
+    .mini-two strong { display:block; font-size:10px; font-weight:500; }
+    .mini-two small { display:block; font-size:8px; margin-top:4px; color:#556779; }
+    .mini-bottom { display:flex; justify-content:space-between; gap:10px; align-items:center; border-top:1px solid #c6cec4; padding-top:12px; margin-top:18px; font-size:8px; }
+    .mini-bottom > span:first-child { color:#f8f8f0; background:#233e4e; padding:5px 9px; border-radius:4px; }
+    .mini-data { background:#1c304b; color:#f9f6ee; }
+    .mini-data .mini-name { font-size:29px; }
+    .mini-data .mini-name span { color:#b9c9dc; }
+    .mini-code { margin:18px 0 17px; padding:12px; font-family:ui-monospace,monospace; color:#cbd9e8; font-size:8px; line-height:1.7; background:#263d5a; border:1px solid #426080; border-radius:7px; overflow-wrap:anywhere; }
+    .mini-code > span { color:#d3bcfa; } .mini-code em { color:#bee1cb; font-style:normal; }
+    .mini-data .mini-two > div { border-color:#45617e; }
+    .mini-data .mini-two small { color:#bbcee2; }
+    .mini-data .mini-bottom { border-color:#45617e; }
+    .mini-data .mini-bottom > span:first-child { background:#e9edf2; color:#1c304b; }
+    .mini-project-visual { height:40px; border-radius:5px; background:#304966; padding:9px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+    .mini-project-visual .code-glyph { color:#d8c6fb; font-family:ui-monospace,monospace; font-size:15px; margin:0; }
+    .mini-project-visual > i { display:block; height:3px; flex:1; background:#829bb6; border-radius:2px; }
+    .mini-project-visual > i:last-child { background:#b4c8d0; flex:.5; }
+    .mini-bars { align-items:end; gap:6px; }
+    .mini-bars > i { height:30%; background:#c6d7be; flex:1; border-radius:2px 2px 0 0; }
+    .mini-bars > i:nth-child(2) { height:55%; background:#b5cbe0; }
+    .mini-bars > i:nth-child(3) { height:80%; background:#dac6a2; }
+    .mini-bars > i:nth-child(4) { height:60%; background:#b5cbe0; }
+    .mini-bars > i:last-child { height:95%; background:#c6d7be; flex:1; }
+    .mini-intern { background:#f8f2e8; }
+    .mini-objective { margin:18px 0 15px; padding-left:12px; border-left:2px solid #9e9377; }
+    .mini-objective > span { font-size:8px; color:#686752; }
+    .mini-objective p { font-size:11px; margin-top:6px; line-height:1.5; }
+    .mini-list { display:flex; flex-direction:column; gap:9px; color:#596574; font-size:9px; }
+    .benefit-strip { display:flex; justify-content:space-between; gap:20px; border-block:1px solid var(--line); padding:21px 0; font-size:11px; color:var(--muted); }
+    .benefit-strip span { display:flex; gap:9px; align-items:center; }
+    .benefit-strip .icon { width:15px; height:15px; color:var(--navy); }
+    .section { padding:85px 0; scroll-margin-top:110px; }
+    .section-heading { display:flex; justify-content:space-between; gap:60px; align-items:end; margin-bottom:35px; }
+    .section-heading h2 { font-family:inherit; font-size:clamp(29px,3.1vw,38px); line-height:1.2; letter-spacing:-.045em; color:var(--navy); font-weight:400; }
+    .section-heading .eyebrow { margin-bottom:12px; font-size:9px; }
+    .section-heading > p { max-width:360px; font-size:13px; color:var(--muted); }
+    .services { padding:49px 0 59px; }
+    .service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px; }
+    .service-blurb { display:grid; grid-template-columns:24px 1fr; column-gap:14px; }
+    .service-number { grid-row:1/3; font-size:10px; color:#6b7782; margin-top:4px; }
+    .service-blurb h3 { font-size:15px; font-weight:500; margin-bottom:8px; }
+    .service-blurb p { color:var(--muted); font-size:12px; line-height:1.8; }
+    .section-paper { background:var(--paper); border-block:1px solid var(--line); }
+    .sample-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:25px; }
+    .sample-card { border:1px solid var(--line); border-radius:14px; background:var(--paper); overflow:hidden; min-width:0; display:flex; flex-direction:column; transition:transform .25s,box-shadow .25s; }
+    .sample-card:hover { transform:translateY(-3px); box-shadow:0 14px 30px rgba(34,46,59,.065); }
+    .sample-preview { border-bottom:1px solid var(--line); }
+    .sample-preview .mini-site { min-height:315px; }
+    .sample-featured { grid-column:1/-1; display:grid; grid-template-columns:1.1fr 1fr; background:var(--cream); }
+    .sample-featured .sample-preview { border-bottom:0; border-right:1px solid var(--line); display:flex; flex-direction:column; }
+    .sample-featured .mini-site { min-height:385px; padding:32px; flex:1; }
+    .sample-featured .mini-name { font-size:39px; }
+    .sample-featured .mini-kicker { font-size:9px; }
+    .sample-featured .mini-name span { font-size:10px; }
+    .sample-featured .mini-code { font-size:11px; padding:16px; }
+    .sample-featured .mini-two strong { font-size:12px; }
+    .sample-featured .mini-two small { font-size:10px; }
+    .sample-featured .mini-bottom { font-size:10px; }
+    .sample-featured .sample-body { padding:35px; justify-content:center; }
+    .sample-featured h3 { font-size:28px; font-weight:400; line-height:1.2; margin:10px 0 16px; }
+    .sample-featured .sample-intro { font-size:14px; }
+    .sample-featured .disclosure { margin-top:9px; }
+    .sample-featured .sample-actions { margin-top:23px; gap:13px 28px; }
+    .sample-featured .sample-actions .text-link { font-size:12px; }
+    .sample-featured .sample-label { color:#435c79; font-size:10px; }
+    .sample-body { padding:22px; display:flex; flex-direction:column; flex:1; }
+    .sample-heading { display:flex; justify-content:space-between; font-size:9px; color:var(--muted); margin-bottom:11px; }
+    .sample-label { letter-spacing:.06em; text-transform:uppercase; }
+    .sample-body h3 { font-size:18px; font-weight:500; letter-spacing:-.025em; line-height:1.35; margin-bottom:12px; }
+    .sample-intro { font-size:12px; color:var(--muted); line-height:1.85; margin-bottom:16px; }
+    .sample-body .disclosure { margin-top:auto; border-block:1px solid var(--line); }
+    .sample-body .disclosure summary { font-size:11px; padding:13px 0; }
+    .sample-body .disclosure-body { padding-bottom:17px; }
+    .sample-actions { display:flex; flex-wrap:wrap; gap:9px 22px; margin-top:16px; }
+    .sample-actions .text-link { font-size:10px; min-height:34px; }
+    .sample-facts { margin:0 0 13px; }
+    .sample-facts > div { margin-bottom:12px; }
+    .sample-facts dt { color:var(--navy); font-size:10px; font-weight:500; margin-bottom:3px; }
+    .sample-facts dd { margin:0; font-size:11px; color:var(--muted); }
+    .sample-note { color:var(--muted); font-size:11px; margin-top:25px; text-align:center; }
+    .package-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:start; }
+    .package-card { padding:28px 25px 0; background:var(--paper); border:1px solid #d6d9d4; border-radius:14px; min-width:0; transition:transform .25s,box-shadow .25s; }
+    .package-card:hover { transform:translateY(-3px); box-shadow:0 14px 30px rgba(34,46,59,.07); }
+    .package-card.is-popular { border-color:var(--navy); background:var(--navy); color:var(--cream); box-shadow:0 10px 25px rgba(25,46,73,.12); }
+    .is-popular .package-top,.is-popular .package-description,.is-popular .package-price small,.is-popular .checklist li { color:#d5dfe9; }
+    .is-popular .package-price > span,.is-popular .disclosure summary { color:var(--cream); }
+    .is-popular .checklist .icon,.is-popular .disclosure summary .icon { color:#d5dfe9; }
+    .is-popular > .btn-navy { background:var(--cream); color:var(--navy); }
+    .is-popular > .btn-navy:hover { background:#eee6d6; }
+    .is-popular > .disclosure { border-top-color:#526781; }
+    .package-top { display:flex; justify-content:space-between; align-items:center; font-size:9px; color:var(--muted); margin-bottom:22px; }
+    .package-label { border:1px solid #cdd2cb; padding:3px 10px; border-radius:99px; color:#46586b; }
+    .is-popular .package-label { background:#2c4664; border-color:#607b97; color:var(--cream); }
+    .package-card h3 { font-size:19px; font-weight:500; line-height:1.35; letter-spacing:-.025em; margin-bottom:9px; min-height:52px; }
+    .package-description { color:var(--muted); font-size:12px; min-height:47px; line-height:1.8; }
+    .package-price { display:flex; gap:12px; align-items:baseline; margin:21px 0 23px; }
+    .package-price > span { font-family:Georgia,serif; color:var(--navy); font-weight:400; font-size:47px; letter-spacing:-.045em; line-height:1; }
+    .package-price small { font-size:10px; color:var(--muted); }
+    .checklist { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+    .checklist li { display:flex; align-items:start; gap:9px; color:var(--muted); font-size:12px; line-height:1.6; }
+    .checklist .icon { width:13px; height:13px; margin-top:4px; color:#4a6475; }
+    .package-card > .checklist { min-height:168px; }
+    .package-card > .btn { width:100%; margin:22px 0; }
+    .package-card > .disclosure { border-top:1px solid var(--line); margin-inline:-25px; padding-inline:25px; }
+    .package-card > .disclosure summary { font-size:11px; padding:16px 0; }
+    .disclosure { border-bottom:1px solid var(--line); }
+    .disclosure summary { list-style:none; display:flex; align-items:center; justify-content:space-between; gap:15px; min-height:48px; cursor:pointer; padding:18px 0; font-size:14px; color:var(--navy); font-weight:400; }
+    .disclosure summary::-webkit-details-marker { display:none; }
+    .disclosure summary::marker { content:''; }
+    .disclosure summary .icon { width:16px; height:16px; color:#64788b; transition:transform .2s; }
+    .disclosure[open] > summary .icon { transform:rotate(45deg); }
+    .disclosure-body { font-size:13px; color:var(--muted); line-height:1.85; padding:0 0 23px; }
+    .disclosure-body p + p { margin-top:12px; }
+    .disclosure-body > .checklist { margin-top:12px; }
+    .package-card .disclosure-body .checklist { margin-top:0; }
+    .pricing-extras { max-width:820px; margin:34px auto 0; }
+    .pricing-extras .disclosure:first-child { border-top:1px solid var(--line); }
+    .pricing-extras summary { font-size:13px; }
+    .addon-list { display:flex; flex-direction:column; }
+    .addon-row { display:flex; gap:26px; align-items:start; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--line); }
+    .addon-row:last-child { border-bottom:0; }
+    .addon-row h3 { font-size:13px; font-weight:500; margin-bottom:6px; color:var(--navy); }
+    .addon-row p { font-size:12px; }
+    .addon-row > span { font-size:13px; color:var(--navy); white-space:nowrap; }
+    .pricing-help { margin-top:25px; font-size:12px; color:var(--muted); text-align:center; }
+    .pricing-help .text-link { font-size:12px; }
+    .process-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:30px; padding:0; margin:0; list-style:none; }
+    .step-number { font-family:Georgia,serif; color:#667d8f; font-size:30px; display:block; border-bottom:1px solid #cbd4d8; padding-bottom:15px; margin-bottom:20px; line-height:1; }
+    .process-step h3 { font-size:16px; font-weight:500; margin-bottom:11px; line-height:1.35; }
+    .process-step p { color:var(--muted); font-size:12px; line-height:1.85; }
+    .github-setup { margin-top:34px; padding:7px 25px; border:1px solid #d3dcd8; border-radius:12px; background:var(--sage); }
+    .github-setup .disclosure { border:0; }
+    .github-setup .disclosure summary { font-size:13px; }
+    .link-example { display:flex; align-items:center; justify-content:space-between; gap:20px; background:var(--paper); padding:18px 20px; border:1px solid #d6ddd6; border-radius:8px; margin:17px 0; }
+    .link-example p { font-size:12px; color:var(--muted); }
+    .link-example code { font-size:12px; color:var(--navy); overflow-wrap:anywhere; }
+    .link-example .icon { color:#6c847d; }
+    .setup-list { list-style:none; padding:0; margin:22px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .setup-list h3 { font-size:13px; font-weight:500; margin-bottom:6px; color:var(--navy); }
+    .setup-list p { font-size:12px; }
+    .ownership-note { display:flex; align-items:start; gap:10px; border-top:1px solid #cbd6cc; padding-top:18px; margin-top:24px; }
+    .ownership-note .icon { margin-top:3px; width:15px; height:15px; }
+    .ownership-note p { font-size:12px; }
+    .faq-grid { display:grid; grid-template-columns:.8fr 1.25fr; gap:85px; align-items:start; }
+    .faq-intro .eyebrow { font-size:9px; margin-bottom:12px; }
+    .faq-intro h2 { font-size:43px; color:var(--navy); margin-bottom:20px; }
+    .faq-intro p { color:var(--muted); font-size:13px; margin-bottom:18px; max-width:280px; }
+    .faq-list { border-top:1px solid var(--line); }
+    .faq-list summary { font-size:13px; }
+    .contact { padding:15px 0 76px; }
+    .contact-card { background:var(--navy); color:var(--cream); padding:49px 55px; border-radius:18px; display:grid; grid-template-columns:1.1fr 1fr; gap:70px; align-items:center; }
+    .contact-card .eyebrow { color:#cbd3dc; margin-bottom:17px; font-size:9px; }
+    .contact-card h2 { font-size:45px; line-height:1.15; }
+    .contact-card h2 em { color:#d8c4a1; font-weight:400; }
+    .contact-copy p { color:#d4dce4; font-size:13px; margin-bottom:21px; }
+    .contact-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; }
+    .contact-actions .text-link { color:#edf0f5; }
+    .contact-note { color:#c5d0dc; font-size:11px; margin-top:19px; }
+    .footer { padding:35px 0 25px; border-top:1px solid var(--line); }
+    .footer-grid { display:grid; grid-template-columns:1.25fr .65fr 1fr; gap:50px; }
+    .footer-brand p { max-width:270px; color:var(--muted); font-size:12px; margin-top:17px; }
+    .footer h3 { font-size:11px; font-weight:500; color:var(--navy); margin-bottom:13px; }
+    .footer ul { padding:0; margin:0; list-style:none; display:flex; flex-direction:column; gap:7px; font-size:11px; color:var(--muted); }
+    .footer a:hover { color:var(--navy); }
+    .footer-bottom { border-top:1px solid var(--line); margin-top:33px; padding-top:20px; display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:10px; }
+    .mobile-contact { display:none; }
+    .can-animate [data-reveal] { opacity:0; transform:translateY(13px); transition:opacity .55s,transform .55s; }
+    .can-animate [data-reveal].is-visible { opacity:1; transform:translateY(0); }
+    .can-animate .sample-card.is-visible:hover { transform:translateY(-3px); }
+    .can-animate .package-card.is-visible:hover { transform:translateY(-3px); }
+    @media (max-width:1100px) {
+      .container { width:calc(100% - 60px); }
+      .hero-grid { gap:45px; }
+      .main-nav { gap:22px; }
+      .preview-caption { align-items:start; flex-direction:column; gap:11px; }
+      .sample-grid,.package-grid { gap:16px; }
+      .sample-body { padding:19px; }
+      .sample-preview .mini-site { padding:20px; }
+      .package-card { padding:25px 20px 0; }
+      .package-card > .disclosure { margin-inline:-20px; padding-inline:20px; }
+      .contact-card { gap:40px; padding:43px; }
+    }
+    @media (max-width:900px) {
+      :root { --header:72px; }
+      .menu-toggle { display:inline-flex; }
+      .main-nav { display:none; position:absolute; top:calc(var(--header) - 1px); left:0; right:0; background:var(--paper); border-bottom:1px solid #cbd0d2; padding:17px 30px 23px; max-height:calc(100dvh - var(--header)); overflow-y:auto; box-shadow:0 15px 25px rgba(34,46,59,.08); }
+      .main-nav.is-open { display:flex; flex-direction:column; align-items:stretch; gap:4px; }
+      .nav-link { min-height:44px; padding:11px 12px; font-size:13px; border-radius:6px; }
+      .nav-link[aria-current]::after { display:none; }
+      .nav-link:hover,.nav-link[aria-current] { background:#edf0ed; }
+      .header-cta { margin-top:7px; min-height:44px; }
+      .hero { padding:57px 0; }
+      .hero-grid { grid-template-columns:1.1fr 1fr; gap:33px; }
+      .hero h1 { font-size:45px; }
+      .hero-lead { font-size:13px; }
+      .hero-art .mini-site { padding:24px; min-height:420px; }
+      .hero-art .mini-name { font-size:31px; }
+      .hero-art .mini-cv > p { font-size:21px; }
+      .hero-spark { right:-13px; }
+      .hero-art::before { right:-12px; }
+      .hero-actions { gap:15px; }
+      .benefit-strip { display:grid; grid-template-columns:1fr 1fr; gap:15px 25px; }
+      .section { padding:70px 0; }
+      .section-heading { gap:30px; }
+      .section-heading > p { max-width:280px; }
+      .service-grid { gap:22px; }
+      .sample-grid { grid-template-columns:1fr; gap:22px; }
+      .sample-card { display:grid; grid-template-columns:1fr 1.2fr; }
+      .sample-preview { border-bottom:0; border-right:1px solid var(--line); display:flex; flex-direction:column; }
+      .sample-preview .mini-site { flex:1; }
+      .sample-body { padding:24px; }
+      .sample-featured .mini-site { min-height:370px; padding:26px; }
+      .sample-featured .sample-body { padding:26px; }
+      .sample-featured h3 { font-size:24px; }
+      .sample-featured .mini-name { font-size:32px; }
+      .sample-featured .mini-code { font-size:9px; }
+      .sample-body .disclosure { margin-top:15px; }
+      .sample-actions { margin-top:auto; padding-top:19px; }
+      .package-card h3 { font-size:17px; }
+      .package-description { min-height:67px; }
+      .package-card > .checklist { min-height:206px; }
+      .package-card > .btn { font-size:11px; padding-inline:10px; }
+      .process-grid { grid-template-columns:1fr 1fr; gap:30px; }
+      .faq-grid { grid-template-columns:.8fr 1.2fr; gap:35px; }
+      .faq-intro h2 { font-size:37px; }
+      .contact-card { gap:30px; padding:35px; }
+      .contact-card h2 { font-size:38px; }
+      .footer-grid { gap:30px; }
+    }
+    @media (max-width:680px) {
+      .container { width:calc(100% - 40px); }
+      .site-header .brand-name small { max-width:145px; font-size:7px; letter-spacing:.1em; }
+      .hero { padding:45px 0 40px; }
+      .hero-grid { grid-template-columns:1fr; gap:25px; }
+      .hero h1 { font-size:clamp(40px,9.3vw,56px); line-height:1.12; }
+      .hero-lead { font-size:14px; line-height:1.85; }
+      .eyebrow { font-size:9px; }
+      .hero-actions { gap:14px; margin-top:24px; }
+      .hero-meta { font-size:10px; }
+      .creator-link { margin-top:22px; font-size:10px; }
+      .hero-art { width:calc(100% - 8px); max-width:420px; margin-inline:auto; padding:20px 0; }
+      .hero-art::before { right:-10px; left:15px; bottom:15px; }
+      .hero-spark { top:-2px; right:-8px; }
+      .hero-art .mini-site { min-height:425px; padding:29px; }
+      .hero-art::after { bottom:127px; }
+      .preview-sticker { left:-8px; top:13px; font-size:9px; }
+      .preview-caption { flex-direction:row; flex-wrap:wrap; align-items:center; gap:10px; }
+      .preview-tabs { gap:5px; }
+      .preview-tabs button { padding:9px 12px; min-height:44px; font-size:10px; }
+      .preview-caption > span { font-size:8px; }
+      .benefit-strip { gap:14px; font-size:10px; }
+      .benefit-strip span { align-items:start; gap:7px; }
+      .benefit-strip .icon { width:13px; height:13px; margin-top:3px; }
+      .section { padding:57px 0; scroll-margin-top:97px; }
+      .section-heading { flex-direction:column; align-items:start; gap:16px; margin-bottom:27px; }
+      .section-heading h2 { font-size:30px; }
+      .section-heading > p { max-width:100%; font-size:13px; }
+      .services { padding:36px 0 44px; }
+      .service-grid { grid-template-columns:1fr; gap:26px; }
+      .service-blurb { grid-template-columns:22px 1fr; }
+      .service-blurb h3 { font-size:16px; }
+      .service-blurb p { font-size:13px; }
+      .sample-card { display:flex; }
+      .sample-featured { display:flex; }
+      .sample-featured .mini-site { padding:27px; min-height:385px; }
+      .sample-featured .mini-name { font-size:35px; }
+      .sample-featured .mini-code { font-size:9px; }
+      .sample-featured .sample-body { padding:24px; }
+      .sample-featured h3 { font-size:24px; }
+      .sample-featured .sample-preview { border-right:0; border-bottom:1px solid var(--line); }
+      .sample-preview { border-right:0; border-bottom:1px solid var(--line); }
+      .sample-preview .mini-site { padding:26px; min-height:310px; }
+      .sample-body { padding:24px; }
+      .sample-body h3 { font-size:20px; }
+      .sample-intro { font-size:13px; }
+      .sample-body .disclosure summary { font-size:12px; min-height:46px; }
+      .sample-actions { margin-top:15px; padding-top:0; justify-content:space-between; }
+      .sample-actions .text-link { font-size:11px; min-height:44px; }
+      .sample-note { text-align:left; font-size:11px; }
+      .package-grid { grid-template-columns:1fr; gap:23px; }
+      .package-card { padding:27px 25px 0; }
+      .package-card > .disclosure { margin-inline:-25px; padding-inline:25px; }
+      .package-card h3 { font-size:21px; min-height:0; }
+      .package-description { font-size:13px; min-height:0; }
+      .package-card > .checklist { min-height:0; }
+      .package-card > .btn { font-size:12px; }
+      .package-top { margin-bottom:19px; }
+      .package-card .disclosure summary { font-size:12px; }
+      .pricing-extras { margin-top:26px; }
+      .pricing-help { text-align:left; font-size:12px; }
+      .process-grid { gap:25px 20px; }
+      .process-step h3 { font-size:15px; }
+      .process-step p { font-size:12px; }
+      .step-number { font-size:27px; padding-bottom:13px; margin-bottom:15px; }
+      .github-setup { padding-inline:19px; margin-top:28px; }
+      .github-setup .disclosure summary { font-size:12px; }
+      .link-example { align-items:start; padding:15px; }
+      .link-example code { font-size:10px; }
+      .setup-list { grid-template-columns:1fr; gap:20px; }
+      .faq-grid { grid-template-columns:1fr; gap:24px; }
+      .faq-intro h2 { font-size:35px; margin-bottom:15px; }
+      .faq-intro p { max-width:100%; margin-bottom:10px; }
+      .faq-list summary { font-size:13px; }
+      .contact { padding:10px 0 55px; }
+      .contact-card { grid-template-columns:1fr; gap:26px; padding:31px 26px; border-radius:14px; }
+      .contact-card h2 { font-size:38px; }
+      .contact-actions { gap:13px 18px; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:30px 22px; }
+      .footer-brand { grid-column:1/-1; }
+      .footer-brand p { max-width:100%; margin-top:12px; }
+      .footer ul { font-size:10px; overflow-wrap:anywhere; }
+      .footer-bottom { flex-direction:column; gap:8px; margin-top:25px; }
+      body { padding-bottom:calc(72px + env(safe-area-inset-bottom,0px)); }
+      .mobile-contact { display:flex; position:fixed; inset:auto 0 0; z-index:35; background:rgba(250,247,240,.97); border-top:1px solid #cbd0c9; align-items:center; justify-content:space-between; gap:18px; padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px)); backdrop-filter:blur(14px); }
+      .mobile-contact > span { font-size:11px; color:var(--muted); line-height:1.45; }
+      .mobile-contact > span strong { display:block; color:var(--navy); font-size:14px; }
+      .mobile-contact .btn { min-height:43px; padding:10px 15px; font-size:11px; }
+    }
+    @media (max-width:360px) {
+      .container { width:calc(100% - 32px); }
+      .hero h1 { font-size:37px; }
+      .hero-actions { flex-direction:column; align-items:stretch; gap:10px; }
+      .hero-actions .text-link { justify-content:center; min-height:44px; }
+      .hero-art .mini-site { padding:24px; }
+      .sample-body { padding:21px; }
+      .sample-actions { gap:10px; }
+      .sample-actions .text-link { font-size:10px; }
+      .process-grid { grid-template-columns:1fr; }
+      .contact-card { padding:27px 22px; }
+      .contact-card h2 { font-size:35px; }
+      .mobile-contact { padding-inline:16px; gap:10px; }
+      .mobile-contact .btn { font-size:10px; padding-inline:12px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation:none !important; transition:none !important; }
+      .can-animate [data-reveal] { opacity:1; transform:none; }
+      .btn:hover,.sample-card:hover,.package-card:hover,.can-animate .package-card.is-visible:hover,.can-animate .sample-card.is-visible:hover,.text-link:hover .icon { transform:none; }
+      .browser-card,.hero-art:hover .browser-card,.hero-art:focus-within .browser-card { transform:none; }
     }
   </style>
 </head>
-
-<body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="#top" aria-label="Web Wizard Home">
-          <img src="assets/images/logo.png" alt="Web Wizard Logo">
-          <span>Web Wizard</span>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#samples">Samples</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Packages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#github-setup">GitHub.io Setup</a></li>
-            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> Start My Portfolio
-              </a>
-            </li>
-          </ul>
-        </div>
+<body id="top">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="M12 2c1 7 3 9 10 10-7 1-9 3-10 10-1-7-3-9-10-10 7-1 9-3 10-10Z"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v3"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24"><path d="m9 15 6-6m-8 3-2 2a4 4 0 0 0 6 6l3-3m-4-10 3-3a4 4 0 0 1 6 6l-2 2"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M11 18h2"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9H4l-2 2V11a9.5 9.5 0 0 1 19 0Z"/><path d="M7 9h10M7 13h7"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Web Wizard home"><span class="brand-mark"><span aria-hidden="true">ww</span><img src="assets/images/logo.png" alt="" data-logo></span><span class="brand-name">Web Wizard<small>Personal websites, thoughtfully made</small></span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-menu"></use></svg></button>
+    <nav class="main-nav" id="mainNavbar" aria-label="Main navigation"><a class="nav-link" href="#samples">Sample styles</a><a class="nav-link" href="#pricing">Packages</a><a class="nav-link" href="#process">How it works</a><a class="nav-link" href="#faq">FAQ</a><a class="btn btn-navy header-cta" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener noreferrer">Let’s build yours <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></nav>
+  </div></header>
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle"><div class="container hero-grid">
+      <div class="hero-copy" data-reveal><div class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-spark"></use></svg> Student portfolios, made personal</div><h1 id="heroTitle">Student portfolios.<br><em>Made for your</em><br><em class="hero-magic">next step.<svg viewBox="0 0 240 13" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9Q93 0 238 6M24 12Q125 5 217 11"/></svg></em></h1><p class="hero-lead">Online CVs and portfolios for students, internship seekers and fresh graduates. Bring your skills, projects and personality together in one link you’ll be proud to share.</p>
+        <div class="hero-actions"><a class="btn btn-navy" href="#pricing">Create my portfolio <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a><a class="text-link" href="#samples">Find my style <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></div>
+        <div class="hero-meta"><span>From RM49 · Promo packages</span><p>Published on your own GitHub.io link</p></div><p class="creator-link">Thoughtfully made by Hidayah. <a class="" href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank" rel="noopener noreferrer">View my own portfolio ↗</a></p>
       </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <main id="top" class="hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <div class="hero-badge">
-            <i class="fab fa-github"></i> Affordable GitHub.io portfolio for students
-          </div>
-
-          <h1>Online CV & portfolio for <span>internship applications</span>.</h1>
-
-          <p>
-            I create simple, clean and mobile-friendly online CV / portfolio websites for students, internship seekers and fresh graduates using GitHub Pages. Turn your resume into a clickable first impression that you can place in your resume, LinkedIn profile, internship form, job application or email signature.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn-brand" href="#pricing">
-              View Student Packages <i class="fas fa-arrow-right"></i>
-            </a>
-            <a class="btn-outline-brand" href="https://nrhdyh.github.io/Get-To-Know-Me/" target="_blank" rel="noopener">
-              View My Portfolio <i class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <ul class="hero-points">
-            <li><i class="fas fa-check-circle"></i> GitHub.io link</li>
-            <li><i class="fas fa-check-circle"></i> No monthly hosting fee</li>
-            <li><i class="fas fa-check-circle"></i> Mobile responsive</li>
-            <li><i class="fas fa-check-circle"></i> Beginner-friendly setup</li>
-            <li><i class="fas fa-check-circle"></i> Resume glow-up</li>
-          </ul>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="hero-card">
-            <div class="preview-top">
-              <div class="browser-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="preview-label">Student Portfolio Preview</div>
-            </div>
-
-            <div class="github-link-box">
-              <i class="fab fa-github"></i>
-              <span>yourusername.github.io</span>
-            </div>
-
-            <div class="profile-preview">
-              <div class="profile-avatar"><i class="fas fa-user-graduate"></i></div>
-              <div>
-                <h3>Your Name</h3>
-                <p>Student • Internship Seeker • Fresh Graduate</p>
-              </div>
-            </div>
-
-            <div class="preview-section">
-              <h4>About Me / Online CV</h4>
-              <div class="mini-lines">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
-            <div class="preview-section">
-              <h4>Portfolio Sections</h4>
-              <div class="preview-tags">
-                <span>Education</span>
-                <span>Skills</span>
-                <span>Projects</span>
-                <span>Resume</span>
-                <span>Contact</span>
-              </div>
-            </div>
-
-            <a class="btn-whatsapp w-100" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20create%20a%20GitHub.io%20portfolio%20for%20student%2Finternship%20application." target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Ask for Student Portfolio
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="hero-art" data-reveal><span class="hero-spark" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-spark"></use></svg></span><span class="preview-sticker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-spark"></use></svg> A little web magic</span><div class="browser-card"><div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><span>yourusername.github.io</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg></div>
+        <div id="heroPreview0" class="hero-preview" role="tabpanel" aria-labelledby="previewTab0"><div class="mini-site mini-cv"><div class="mini-kicker">A personal introduction</div><div class="mini-name">Nur Aisyah<span>Business Student · Online CV</span></div><p>A little about me,<br>and where I’m headed.</p><div class="mini-lines"><i></i><i></i><i></i></div><div class="mini-two"><div><span>01</span><strong>Education</strong><small>Course & university</small></div><div><span>02</span><strong>Skills</strong><small>Tools & strengths</small></div></div><div class="mini-bottom"><span>Download CV</span><span>Let’s connect ↗</span></div></div></div><div id="heroPreview1" class="hero-preview" role="tabpanel" aria-labelledby="previewTab1" hidden><div class="mini-site mini-data"><div class="mini-kicker">IT / Data Portfolio</div><div class="mini-name">Ideas. Code.<br>Possibilities.<span>Projects · Skills · GitHub</span></div><div class="mini-code"><span>const</span> student = {<br>&nbsp; field: <em>"Data Science"</em>,<br>&nbsp; projects: ["Dashboard", "Web App", "AI"]<br>}</div><div class="mini-two"><div><div class="mini-project-visual" aria-hidden="true"><span class="code-glyph">&lt;/&gt;</span><i></i><i></i></div><strong>FYP System</strong><small>Web app & dashboard</small></div><div><div class="mini-project-visual mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><strong>Data Project</strong><small>Charts & insights</small></div></div><div class="mini-bottom"><span>View projects</span><span>GitHub ↗</span></div></div></div><div id="heroPreview2" class="hero-preview" role="tabpanel" aria-labelledby="previewTab2" hidden><div class="mini-site mini-intern"><div class="mini-kicker">Your next chapter</div><div class="mini-name">Internship<br>Profile<span>Ready to introduce myself.</span></div><div class="mini-objective"><span>Career objective</span><p>Learning, contributing<br>and growing with a team.</p></div><div class="mini-list"><span>01 &nbsp; Academic background</span><span>02 &nbsp; Relevant strengths</span><span>03 &nbsp; Project highlights</span></div><div class="mini-bottom"><span>Download CV</span><span>Contact me ↗</span></div></div></div>
+      </div><div class="preview-caption"><div class="preview-tabs" role="tablist" aria-label="Explore illustrative portfolio styles" id="previewTabs" hidden><button type="button" role="tab" id="previewTab0" aria-controls="heroPreview0" aria-selected="true" tabindex="0" data-preview="0">Online CV</button><button type="button" role="tab" id="previewTab1" aria-controls="heroPreview1" aria-selected="false" tabindex="-1" data-preview="1">Projects</button><button type="button" role="tab" id="previewTab2" aria-controls="heroPreview2" aria-selected="false" tabindex="-1" data-preview="2">Internship</button></div><span>Try a style ↑</span></div><div class="preview-foot"><span>Illustrative style preview</span><a id="heroLiveSample" class="text-link" href="https://nrhdyh.github.io/basic-cv/" target="_blank" rel="noopener noreferrer">Open this sample <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></div></div>
+    </div></section>
+    <div class="container"><div class="benefit-strip" aria-label="Service benefits"><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg> One link, easy to share</span><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-phone"></use></svg> Designed for mobile</span><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg> No monthly hosting fee</span><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg> Your own GitHub account</span></div></div>
+    <section class="services" id="services" aria-label="Portfolio services"><div class="container service-grid"><article class="service-blurb" data-reveal><span class="service-number">01</span><h3>Online CV</h3><p>Suitable for students who need a simple profile link to support internship or job applications.</p></article><article class="service-blurb" data-reveal><span class="service-number">02</span><h3>Student Portfolio</h3><p>Best for internship seekers and fresh graduates who want to showcase projects and skills online.</p></article><article class="service-blurb" data-reveal><span class="service-number">03</span><h3>Project Portfolio Plus</h3><p>Suitable for IT, data, design, business or final-year students with multiple projects or achievements.</p></article></div></section>
+    <section class="section section-paper" id="samples" aria-labelledby="sampleTitle"><div class="container"><div class="section-heading" data-reveal><div><div class="eyebrow">Find your style</div><h2 id="sampleTitle">Three styles.<br>One story that’s yours.</h2></div><p>Projects to show? A résumé to share? Explore the sample styles and find a starting point that feels like you.</p></div><div class="sample-grid"><article class="sample-card sample-featured" data-reveal><div class="sample-preview" role="img" aria-label="Illustrative IT / Data Student Portfolio style preview"><div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><span>studentdev.github.io</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg></div><div class="mini-site mini-data"><div class="mini-kicker">IT / Data Portfolio</div><div class="mini-name">Ideas. Code.<br>Possibilities.<span>Projects · Skills · GitHub</span></div><div class="mini-code"><span>const</span> student = {<br>&nbsp; field: <em>"Data Science"</em>,<br>&nbsp; projects: ["Dashboard", "Web App", "AI"]<br>}</div><div class="mini-two"><div><div class="mini-project-visual" aria-hidden="true"><span class="code-glyph">&lt;/&gt;</span><i></i><i></i></div><strong>FYP System</strong><small>Web app & dashboard</small></div><div><div class="mini-project-visual mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><strong>Data Project</strong><small>Charts & insights</small></div></div><div class="mini-bottom"><span>View projects</span><span>GitHub ↗</span></div></div></div>
+      <div class="sample-body"><div class="sample-heading"><span class="sample-label">Project-led</span><span class="sample-number">02</span></div><h3>IT / Data Student Portfolio</h3><p class="sample-intro">IT, Computer Science, Data Science, Software, AI or dashboard project students.</p>
+      <details class="disclosure" ><summary><span>Is this style for me?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><dl class="sample-facts"><div><dt>Best for</dt><dd>IT, Computer Science, Data Science, Software, AI or dashboard project students.</dd></div><div><dt>First impression</dt><dd>Technical, confident, project-focused and more developer-like.</dd></div></dl><p>Your projects deserve more than screenshots in a PDF. This style helps them look structured, clickable and internship-ready.</p><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Highlights 1–3 projects with title, description, tech stack and buttons</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Suitable for GitHub link, live demo link, FYP, dashboard or web system</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Helps employers quickly understand what you can build</span></li></ul></div></details><div class="sample-actions"><a class="text-link" href="https://nrhdyh.github.io/it-data-portfolio/" target="_blank" rel="noopener noreferrer">View live sample <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a><a class="text-link" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20IT%20%2F%20Data%20Student%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AProject%20I%20want%20to%20showcase%3A%20" target="_blank" rel="noopener noreferrer">Choose this style <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a></div></div></article>
+<article class="sample-card " data-reveal><div class="sample-preview" role="img" aria-label="Illustrative Basic Online CV style preview"><div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><span>name.github.io</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg></div><div class="mini-site mini-cv"><div class="mini-kicker">A personal introduction</div><div class="mini-name">Nur Aisyah<span>Business Student · Online CV</span></div><p>A little about me,<br>and where I’m headed.</p><div class="mini-lines"><i></i><i></i><i></i></div><div class="mini-two"><div><span>01</span><strong>Education</strong><small>Course & university</small></div><div><span>02</span><strong>Skills</strong><small>Tools & strengths</small></div></div><div class="mini-bottom"><span>Download CV</span><span>Let’s connect ↗</span></div></div></div>
+      <div class="sample-body"><div class="sample-heading"><span class="sample-label">Simple & personal</span><span class="sample-number">01</span></div><h3>Basic Online CV</h3><p class="sample-intro">Students who need a clean online CV without too many project details.</p>
+      <details class="disclosure" ><summary><span>Is this style for me?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><dl class="sample-facts"><div><dt>Best for</dt><dd>Students who need a clean online CV without too many project details.</dd></div><div><dt>First impression</dt><dd>Minimal, organized, readable and not overwhelming.</dd></div></dl><p>Perfect if you want something simple, neat and easy to send when someone asks, “Can I see your CV?”</p><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Includes About, Education, Skills, Resume and Contact</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Suitable for resume link, LinkedIn profile and internship form</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Good for students from business, admin, education or general fields</span></li></ul></div></details><div class="sample-actions"><a class="text-link" href="https://nrhdyh.github.io/basic-cv/" target="_blank" rel="noopener noreferrer">View live sample <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a><a class="text-link" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Basic%20Online%20CV%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener noreferrer">Choose this style <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a></div></div></article>
+<article class="sample-card " data-reveal><div class="sample-preview" role="img" aria-label="Illustrative Internship Portfolio style preview"><div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><span>internname.github.io</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg></div><div class="mini-site mini-intern"><div class="mini-kicker">Your next chapter</div><div class="mini-name">Internship<br>Profile<span>Ready to introduce myself.</span></div><div class="mini-objective"><span>Career objective</span><p>Learning, contributing<br>and growing with a team.</p></div><div class="mini-list"><span>01 &nbsp; Academic background</span><span>02 &nbsp; Relevant strengths</span><span>03 &nbsp; Project highlights</span></div><div class="mini-bottom"><span>Download CV</span><span>Contact me ↗</span></div></div></div>
+      <div class="sample-body"><div class="sample-heading"><span class="sample-label">Application-ready</span><span class="sample-number">03</span></div><h3>Internship Portfolio</h3><p class="sample-intro">Final-year students, fresh graduates and internship seekers from any course.</p>
+      <details class="disclosure" ><summary><span>Is this style for me?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><dl class="sample-facts"><div><dt>Best for</dt><dd>Final-year students, fresh graduates and internship seekers from any course.</dd></div><div><dt>First impression</dt><dd>Formal, clear, employer-friendly and ready to share.</dd></div></dl><p>A neat profile page that makes your internship application look more complete, polished and easy to review.</p><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Focuses on objective, education, skills, project highlights and contact</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Good for internship emails, resume QR code, LinkedIn and application forms</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Helps your profile look more complete even if you are still a student</span></li></ul></div></details><div class="sample-actions"><a class="text-link" href="https://nrhdyh.github.io/internship-portfolio/" target="_blank" rel="noopener noreferrer">View live sample <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a><a class="text-link" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Internship%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AInternship%20field%3A%20" target="_blank" rel="noopener noreferrer">Choose this style <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a></div></div></article></div><p class="sample-note">Sample styles are for reference. Content is customized using your own materials.</p></div></section>
+    <section class="section" id="pricing" aria-labelledby="packageTitle"><div class="container"><div class="section-heading" data-reveal><div><div class="eyebrow">Student-friendly packages</div><h2 id="packageTitle">Your portfolio starts here.<br>Choose your next step.</h2></div><p>Start with the essentials, or give your projects more room to shine. Every package includes publishing on a GitHub.io link.</p></div><div class="package-grid"><article class="package-card " data-reveal data-package>
+      <div class="package-top"><span class="package-number">01</span><span class="package-label">Basic</span></div>
+      <h3>Basic Online CV</h3><p class="package-description">Best for students who need a simple online CV link.</p>
+      <div class="package-price"><span>RM49</span><small>promo</small></div>
+      <ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>One-page online CV</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Education &amp; skills</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Resume download</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Mobile-friendly layout</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 minor revision</span></li></ul>
+      <a class="btn btn-outline" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Basic%20Online%20CV%20package%20%28RM49%29." target="_blank" rel="noopener noreferrer">Choose this package <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a>
+      <details class="disclosure" data-package-details><summary><span>Everything included</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>One-page online CV</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>About Me section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Education section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Skills section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Resume download button</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Contact links</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Mobile-friendly layout</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>GitHub.io publishing</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 minor revision</span></li></ul></div></details>
+    </article>
+<article class="package-card is-popular" data-reveal data-package>
+      <div class="package-top"><span class="package-number">02</span><span class="package-label">Popular</span></div>
+      <h3>Student Portfolio</h3><p class="package-description">Best for internship seekers and fresh graduates.</p>
+      <div class="package-price"><span>RM89</span><small>promo</small></div>
+      <ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>One-page student portfolio</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 to 3 project showcases</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Resume &amp; contact links</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Basic GitHub setup guidance</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 minor revision</span></li></ul>
+      <a class="btn btn-navy" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Student%20Portfolio%20package%20%28RM89%29.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AResume%20ready%3A%20" target="_blank" rel="noopener noreferrer">Choose this package <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a>
+      <details class="disclosure" data-package-details><summary><span>Everything included</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>One-page student portfolio</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>About Me section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Education section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Skills section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 to 3 project showcases</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Resume download button</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>LinkedIn, GitHub, email or WhatsApp link</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Basic GitHub setup guidance</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>GitHub.io publishing</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>1 minor revision</span></li></ul></div></details>
+    </article>
+<article class="package-card " data-reveal data-package>
+      <div class="package-top"><span class="package-number">03</span><span class="package-label">Plus</span></div>
+      <h3>Project Portfolio Plus</h3><p class="package-description">Best for students with multiple projects or achievements.</p>
+      <div class="package-price"><span>RM129</span><small>promo</small></div>
+      <ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>More polished portfolio layout</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>3 to 5 project showcases</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Achievement or certificate section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Basic GitHub setup guidance</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>2 minor revisions</span></li></ul>
+      <a class="btn btn-outline" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Project%20Portfolio%20Plus%20package%20%28RM129%29." target="_blank" rel="noopener noreferrer">Choose this package <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg></a>
+      <details class="disclosure" data-package-details><summary><span>Everything included</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><ul class="checklist"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>More polished portfolio layout</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>About Me section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Education section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Skills section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>3 to 5 project showcases</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Achievement or certificate section</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Resume download button</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>Basic GitHub setup guidance</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>GitHub.io publishing</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg><span>2 minor revisions</span></li></ul></div></details>
+    </article></div><div class="pricing-extras"><details class="disclosure" ><summary><span>Need a little extra? Explore add-ons</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><div class="addon-list"><div class="addon-row"><div><h3>Extra Project</h3><p>Add more project showcase beyond the selected package limit.</p></div><span>RM15+</span></div><div class="addon-row"><div><h3>Content Polishing</h3><p>Improve wording for About Me, project description or profile summary.</p></div><span>RM30+</span></div><div class="addon-row"><div><h3>Resume Touch-up</h3><p>Minor resume wording or layout improvement before adding it to the portfolio.</p></div><span>RM30+</span></div><div class="addon-row"><div><h3>Future Update</h3><p>Update content later such as new project, new resume or new contact link.</p></div><span>RM20+</span></div></div></div></details><details class="disclosure" ><summary><span>What do these packages cover?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Note: Prices do not include paid domain, paid hosting, database system, login system, payment gateway or custom web application features.</p></div></details></div><p class="pricing-help">Not sure which package fits? <a class="text-link" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20to%20create%20a%20GitHub.io%20portfolio%20for%20student%2Finternship%20application." target="_blank" rel="noopener noreferrer">Let’s chat about your portfolio <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></p></div></section>
+    <section class="section section-paper" id="process" aria-labelledby="processTitle"><div class="container"><div class="section-heading" data-reveal><div><div class="eyebrow">From hello to online</div><h2 class="serif" id="processTitle">A simple process,<br>with a little guidance.</h2></div><p>You bring your story and materials. I’ll help turn them into a portfolio you can share.</p></div><ol class="process-grid"><li class="process-step" data-reveal><span class="step-number">01</span><h3>Choose Package</h3><p>Share your purpose, course/field and portfolio needs. I will suggest the most suitable package.</p></li><li class="process-step" data-reveal><span class="step-number">02</span><h3>Deposit &amp; Content</h3><p>A 50% deposit is required before starting. Then you send resume, profile, skills, projects and links.</p></li><li class="process-step" data-reveal><span class="step-number">03</span><h3>GitHub Setup</h3><p>You create your GitHub account and add me as a collaborator. I will guide the setup step by step.</p></li><li class="process-step" data-reveal><span class="step-number">04</span><h3>Build &amp; Publish</h3><p>I design, upload and publish your portfolio. After review and revision, final handover will be given.</p></li></ol><div class="github-setup" id="github-setup"><details class="disclosure" ><summary><span>How will my GitHub.io link work?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Your portfolio is published under your own GitHub account, using your username.</p><div class="link-example"><div><p>Example GitHub username: aisyahazmi</p><code>https://aisyahazmi.github.io</code></div><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg></div><ol class="setup-list"><li><h3>1. Create GitHub Account</h3><p>You create your own GitHub account using a professional username.</p></li><li><h3>2. Create Repository</h3><p>Create a repository named exactly like your username.github.io.</p></li><li><h3>3. Add Collaborator</h3><p>Add me as a collaborator so I can upload and set up your portfolio files.</p></li><li><h3>4. Portfolio Goes Live</h3><p>Your online CV / portfolio will be published using your own GitHub.io link.</p></li></ol><div class="ownership-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"></use></svg><p>No password sharing is required. You only add me as a collaborator for portfolio setup.</p></div></div></details></div></div></section>
+    <section class="section" id="faq" aria-labelledby="faqTitle"><div class="container faq-grid"><div class="faq-intro" data-reveal><div class="eyebrow">A few good questions</div><h2 class="serif" id="faqTitle">Before we<br>get started.</h2><p>New to online portfolios or GitHub? Here are the essentials.</p><a class="text-link" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener noreferrer">Ask me on WhatsApp <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></div><div class="faq-list" data-reveal><details class="disclosure" data-faq><summary><span>Do I need a GitHub account?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Yes. You need your own GitHub account so the portfolio link can use your own username, such as yourusername.github.io.</p></div></details><details class="disclosure" data-faq><summary><span>Do I need to share my GitHub password?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>No. You do not need to share your password. You only add me as a collaborator to help upload and set up the portfolio files.</p></div></details><details class="disclosure" data-faq><summary><span>Is there any monthly hosting fee?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>No. The portfolio will be published using GitHub Pages, so there is no monthly hosting fee for this package.</p></div></details><details class="disclosure" data-faq><summary><span>Can I use the link in my resume or internship application?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Yes. You can add the GitHub.io link to your resume, LinkedIn profile, email signature, internship form or job application.</p></div></details><details class="disclosure" data-faq><summary><span>What do I need to prepare?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Please prepare your resume PDF, short profile, education details, skills list, project details, project screenshots if available, contact links and preferred design style.</p></div></details><details class="disclosure" data-faq><summary><span>Can I update my portfolio later?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>Yes. Future updates can be requested as an add-on, such as adding new projects, updating resume files, changing profile details or adding new links.</p></div></details><details class="disclosure" data-faq><summary><span>Is this suitable for systems with login or database?</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"></use></svg></summary><div class="disclosure-body"><p>No. This package is for static online CV and portfolio websites only. It does not include login systems, databases, payment gateways or advanced web application functions.</p></div></details></div></div></section>
+    <section class="contact" id="contact" aria-labelledby="contactTitle"><div class="container"><div class="contact-card" data-reveal><div><div class="eyebrow">Your next chapter starts here</div><h2 class="serif" id="contactTitle">Let’s put your<br><em>story online.</em></h2></div><div class="contact-copy"><p>Send your preferred package, course or field, and what you’re applying for. I’ll help you choose a starting point.</p><div class="contact-actions"><a class="btn btn-cream" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-chat"></use></svg> Chat on WhatsApp</a><a class="text-link" href="mailto:nurhidayah9501@gmail.com?subject=GitHub.io%20Student%20Portfolio%20Request&amp;body=Hi%20Dayah%2C%0A%0AI%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%0APurpose%3A%0ACourse%2Ffield%3A%0AResume%20ready%3A%0A%0AThank%20you.">Send an email <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></div><div class="contact-note">Students · Internship seekers · Fresh graduates</div></div></div></div></section>
   </main>
-
-  <!-- Values -->
-  <section class="section-small">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="value-card">
-            <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
-            <h3>Better Than Resume Only</h3>
-            <p>Show your profile, skills, projects and resume in one clean online link that employers can open easily.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="value-card">
-            <div class="icon-circle"><i class="fas fa-link"></i></div>
-            <h3>Easy to Share</h3>
-            <p>Add your GitHub.io portfolio link to your resume, LinkedIn, WhatsApp bio, email signature or internship form.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="value-card">
-            <div class="icon-circle"><i class="fas fa-wallet"></i></div>
-            <h3>Student-Friendly</h3>
-            <p>Suitable for students who want a professional online presence without paid hosting or monthly website fees.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section-padding bg-soft">
-    <div class="container">
-      <div class="section-title">
-        <span>Services</span>
-        <h2>Focused portfolio services for students</h2>
-        <p>Simple online CV and portfolio websites designed for students, internship seekers and fresh graduates who need a professional link for applications.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <div class="service-card">
-            <div class="icon-circle"><i class="fas fa-id-card"></i></div>
-            <h3>Online CV</h3>
-            <p>Suitable for students who need a simple profile link to support internship or job applications.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> About Me and short profile</li>
-              <li><i class="fas fa-check"></i> Education and skills section</li>
-              <li><i class="fas fa-check"></i> Resume download button</li>
-              <li><i class="fas fa-check"></i> Email, LinkedIn or WhatsApp link</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="service-card">
-            <div class="icon-circle"><i class="fas fa-laptop-code"></i></div>
-            <h3>Student Portfolio</h3>
-            <p>Best for internship seekers and fresh graduates who want to showcase projects and skills online.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> Profile, education and skills</li>
-              <li><i class="fas fa-check"></i> 1 to 3 project showcases</li>
-              <li><i class="fas fa-check"></i> GitHub, LinkedIn and resume links</li>
-              <li><i class="fas fa-check"></i> Mobile-friendly design</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="service-card">
-            <div class="icon-circle"><i class="fas fa-star"></i></div>
-            <h3>Project Portfolio Plus</h3>
-            <p>Suitable for IT, data, design, business or final-year students with multiple projects or achievements.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> More polished portfolio layout</li>
-              <li><i class="fas fa-check"></i> 3 to 5 project showcases</li>
-              <li><i class="fas fa-check"></i> Achievement or certificate section</li>
-              <li><i class="fas fa-check"></i> GitHub.io setup guidance</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Samples -->
-  <section id="samples" class="section-padding">
-    <div class="container">
-      <div class="section-title">
-        <span>Samples</span>
-        <h2>Choose a portfolio style that makes your profile look ready</h2>
-        <p>Your portfolio is not just a link. It is a clean first impression that helps people see your background, skills, projects and contact details faster than a normal PDF resume.</p>
-      </div>
-
-      <div class="sample-benefit-bar">
-        <div class="sample-benefit-item">
-          <i class="fas fa-bolt"></i>
-          <div>
-            <strong>One link, many uses</strong>
-            <span>Place it in your resume, LinkedIn, email signature, internship form or WhatsApp bio.</span>
-          </div>
-        </div>
-        <div class="sample-benefit-item">
-          <i class="fas fa-gem"></i>
-          <div>
-            <strong>Looks more prepared</strong>
-            <span>A simple GitHub.io portfolio can make your application feel more organized and serious.</span>
-          </div>
-        </div>
-        <div class="sample-benefit-item">
-          <i class="fab fa-github"></i>
-          <div>
-            <strong>Student-friendly setup</strong>
-            <span>No monthly hosting fee, no password sharing, and published under your own GitHub username.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4 align-items-stretch">
-        <div class="col-lg-4">
-          <div class="sample-card">
-            <div class="sample-preview">
-              <div class="sample-browser">
-                <div class="sample-dots"><span></span><span></span><span></span></div>
-                <div class="sample-url">name.github.io</div>
-              </div>
-
-              <div class="sample-screen">
-                <div class="sample-mini-label"><i class="fas fa-star"></i> Simple but professional</div>
-                <div class="mini-hero">
-                  <div class="sample-avatar"><i class="fas fa-user-graduate"></i></div>
-                  <div>
-                    <h4>Nur Aisyah</h4>
-                    <p>Business Student • Online CV</p>
-                  </div>
-                </div>
-
-                <div class="mini-feature-strip"><i class="fas fa-magic"></i> Turn a normal resume into a clean shareable profile.</div>
-
-                <div class="mini-line-block">
-                  <div class="mini-section-title">Professional Summary</div>
-                  <div class="mini-line w-95"></div>
-                  <div class="mini-line w-86"></div>
-                  <div class="mini-line w-58"></div>
-                </div>
-
-                <div class="mini-split">
-                  <div class="mini-info-card">
-                    <strong>Education</strong>
-                    <span>Course, university<br>and current year</span>
-                  </div>
-                  <div class="mini-info-card">
-                    <strong>Resume</strong>
-                    <span>Download CV<br>+ contact button</span>
-                  </div>
-                </div>
-
-                <div class="mini-stat-row">
-                  <div class="mini-stat"><strong>4</strong><span>Sections</span></div>
-                  <div class="mini-stat"><strong>CV</strong><span>Button</span></div>
-                  <div class="mini-stat"><strong>Link</strong><span>Ready</span></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sample-header-row">
-              <h3>Basic Online CV</h3>
-              <span class="sample-type">Clean</span>
-            </div>
-
-            <div class="sample-magic-line">
-              <i class="fas fa-wand-magic-sparkles"></i> Perfect if you want something simple, neat and easy to send when someone asks, “Can I see your CV?”
-            </div>
-
-            <div class="sample-quick-info">
-              <div>
-                <small>Best for</small>
-                <strong>Students who need a clean online CV without too many project details.</strong>
-              </div>
-              <div>
-                <small>First impression</small>
-                <strong>Minimal, organized, readable and not overwhelming.</strong>
-              </div>
-            </div>
-
-            <ul class="sample-details">
-              <li><i class="fas fa-check"></i> Includes About, Education, Skills, Resume and Contact</li>
-              <li><i class="fas fa-check"></i> Suitable for resume link, LinkedIn profile and internship form</li>
-              <li><i class="fas fa-check"></i> Good for students from business, admin, education or general fields</li>
-            </ul>
-
-            <div class="sample-actions">
-              <a class="btn-outline-brand" href="https://nrhdyh.github.io/basic-cv/" target="_blank" rel="noopener">
-                View Live Sample <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Basic%20Online%20CV%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
-                I Want This Style <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="sample-card featured-sample">
-            <div class="sample-preview">
-              <div class="sample-browser">
-                <div class="sample-dots"><span></span><span></span><span></span></div>
-                <div class="sample-url">studentdev.github.io</div>
-              </div>
-
-              <div class="sample-screen">
-                <div class="sample-mini-label"><i class="fas fa-fire"></i> Project glow-up</div>
-                <div class="mini-hero">
-                  <div class="sample-avatar"><i class="fas fa-laptop-code"></i></div>
-                  <div>
-                    <h4>IT / Data Portfolio</h4>
-                    <p>Projects • Skills • GitHub</p>
-                  </div>
-                </div>
-
-                <div class="mini-code-card">
-                  <div><span class="code-purple">const</span> student = {</div>
-                  <div>&nbsp;&nbsp;field: <span class="code-green">"Data Science"</span>,</div>
-                  <div>&nbsp;&nbsp;projects: <span class="code-blue">["Dashboard", "Web App", "AI"]</span>,</div>
-                  <div>&nbsp;&nbsp;status: <span class="code-green">"Internship Ready"</span></div>
-                  <div>}</div>
-                </div>
-
-                <div class="mini-feature-strip"><i class="fas fa-sparkles"></i> Make your assignments look like real portfolio work.</div>
-
-                <div class="mini-section-title">Featured Projects</div>
-                <div class="mini-project-grid">
-                  <div class="mini-project-card">
-                    <strong>FYP System</strong>
-                    <span>Web app + dashboard + features</span>
-                  </div>
-                  <div class="mini-project-card">
-                    <strong>Data Project</strong>
-                    <span>EDA + charts + insights</span>
-                  </div>
-                </div>
-
-                <div class="mini-pill-row">
-                  <span>Python</span>
-                  <span>SQL</span>
-                  <span>React</span>
-                  <span>GitHub</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="sample-header-row">
-              <h3>IT / Data Student Portfolio</h3>
-              <span class="sample-type">Popular</span>
-            </div>
-
-            <div class="sample-magic-line">
-              <i class="fas fa-wand-magic-sparkles"></i> Your projects deserve more than screenshots in a PDF. This style helps them look structured, clickable and internship-ready.
-            </div>
-
-            <div class="sample-quick-info">
-              <div>
-                <small>Best for</small>
-                <strong>IT, Computer Science, Data Science, Software, AI or dashboard project students.</strong>
-              </div>
-              <div>
-                <small>First impression</small>
-                <strong>Technical, confident, project-focused and more developer-like.</strong>
-              </div>
-            </div>
-
-            <ul class="sample-details">
-              <li><i class="fas fa-check"></i> Highlights 1–3 projects with title, description, tech stack and buttons</li>
-              <li><i class="fas fa-check"></i> Suitable for GitHub link, live demo link, FYP, dashboard or web system</li>
-              <li><i class="fas fa-check"></i> Helps employers quickly understand what you can build</li>
-            </ul>
-
-            <div class="sample-actions">
-              <a class="btn-outline-brand" href="https://nrhdyh.github.io/it-data-portfolio/" target="_blank" rel="noopener">
-                View Live Sample <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a class="btn-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20IT%20%2F%20Data%20Student%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AProject%20I%20want%20to%20showcase%3A%20" target="_blank" rel="noopener">
-                I Want This Style <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="sample-card">
-            <div class="sample-preview">
-              <div class="sample-browser">
-                <div class="sample-dots"><span></span><span></span><span></span></div>
-                <div class="sample-url">internname.github.io</div>
-              </div>
-
-              <div class="sample-screen">
-                <div class="sample-mini-label"><i class="fas fa-briefcase"></i> Application-ready</div>
-                <div class="mini-hero">
-                  <div class="sample-avatar"><i class="fas fa-briefcase"></i></div>
-                  <div>
-                    <h4>Internship Profile</h4>
-                    <p>Ready for internship application</p>
-                  </div>
-                </div>
-
-                <div class="mini-feature-strip"><i class="fas fa-paper-plane"></i> Look prepared before the interview even starts.</div>
-
-                <div class="mini-timeline">
-                  <div class="mini-timeline-item">
-                    <span class="mini-dot"></span>
-                    <div>
-                      <strong>Career Objective</strong>
-                      <span>Short statement for internship role</span>
-                    </div>
-                  </div>
-                  <div class="mini-timeline-item">
-                    <span class="mini-dot"></span>
-                    <div>
-                      <strong>Academic Background</strong>
-                      <span>Course, university and semester</span>
-                    </div>
-                  </div>
-                  <div class="mini-timeline-item">
-                    <span class="mini-dot"></span>
-                    <div>
-                      <strong>Relevant Strengths</strong>
-                      <span>Skills, tools and project highlights</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mini-cta-row">
-                  <span class="primary-mini">Download CV</span>
-                  <span>Contact Me</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="sample-header-row">
-              <h3>Internship Portfolio</h3>
-              <span class="sample-type">Formal</span>
-            </div>
-
-            <div class="sample-magic-line">
-              <i class="fas fa-wand-magic-sparkles"></i> A neat profile page that makes your internship application look more complete, polished and easy to review.
-            </div>
-
-            <div class="sample-quick-info">
-              <div>
-                <small>Best for</small>
-                <strong>Final-year students, fresh graduates and internship seekers from any course.</strong>
-              </div>
-              <div>
-                <small>First impression</small>
-                <strong>Formal, clear, employer-friendly and ready to share.</strong>
-              </div>
-            </div>
-
-            <ul class="sample-details">
-              <li><i class="fas fa-check"></i> Focuses on objective, education, skills, project highlights and contact</li>
-              <li><i class="fas fa-check"></i> Good for internship emails, resume QR code, LinkedIn and application forms</li>
-              <li><i class="fas fa-check"></i> Helps your profile look more complete even if you are still a student</li>
-            </ul>
-
-            <div class="sample-actions">
-              <a class="btn-outline-brand" href="https://nrhdyh.github.io/internship-portfolio/" target="_blank" rel="noopener">
-                View Live Sample <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20want%20the%20Internship%20Portfolio%20style.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AInternship%20field%3A%20" target="_blank" rel="noopener">
-                I Want This Style <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="sample-note">
-        <strong>Small link, big first impression.</strong> These are sample styles for reference only. Final portfolio content will be customized based on your course, resume, skills and project materials.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- Pricing -->
-  <section id="pricing" class="section-padding">
-    <div class="container">
-      <div class="section-title">
-        <span>Packages</span>
-        <h2>Student-friendly GitHub.io portfolio packages</h2>
-        <p>All packages use GitHub Pages publishing with a GitHub.io link. No monthly hosting fee is required.</p>
-      </div>
-
-      <div class="row g-4 align-items-stretch">
-        <div class="col-lg-4">
-          <div class="price-card">
-            <span class="price-badge">Basic</span>
-            <h3>Basic Online CV</h3>
-            <div class="price"><strong>RM49</strong><span>promo</span></div>
-            <p class="price-note">Best for students who need a simple online CV link.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> One-page online CV</li>
-              <li><i class="fas fa-check"></i> About Me section</li>
-              <li><i class="fas fa-check"></i> Education section</li>
-              <li><i class="fas fa-check"></i> Skills section</li>
-              <li><i class="fas fa-check"></i> Resume download button</li>
-              <li><i class="fas fa-check"></i> Contact links</li>
-              <li><i class="fas fa-check"></i> Mobile-friendly layout</li>
-              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
-              <li><i class="fas fa-check"></i> 1 minor revision</li>
-            </ul>
-            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Basic%20Online%20CV%20package%20%28RM49%29." target="_blank" rel="noopener">Ask About This</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="price-card featured">
-            <span class="price-badge">Popular</span>
-            <h3>Student Portfolio</h3>
-            <div class="price"><strong>RM89</strong><span>promo</span></div>
-            <p class="price-note">Best for internship seekers and fresh graduates.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> One-page student portfolio</li>
-              <li><i class="fas fa-check"></i> About Me section</li>
-              <li><i class="fas fa-check"></i> Education section</li>
-              <li><i class="fas fa-check"></i> Skills section</li>
-              <li><i class="fas fa-check"></i> 1 to 3 project showcases</li>
-              <li><i class="fas fa-check"></i> Resume download button</li>
-              <li><i class="fas fa-check"></i> LinkedIn, GitHub, email or WhatsApp link</li>
-              <li><i class="fas fa-check"></i> Basic GitHub setup guidance</li>
-              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
-              <li><i class="fas fa-check"></i> 1 minor revision</li>
-            </ul>
-            <a class="btn-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Student%20Portfolio%20package%20%28RM89%29.%0A%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0AResume%20ready%3A%20" target="_blank" rel="noopener">Start This Package</a>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="price-card">
-            <span class="price-badge">Plus</span>
-            <h3>Project Portfolio Plus</h3>
-            <div class="price"><strong>RM129</strong><span>promo</span></div>
-            <p class="price-note">Best for students with multiple projects or achievements.</p>
-            <ul>
-              <li><i class="fas fa-check"></i> More polished portfolio layout</li>
-              <li><i class="fas fa-check"></i> About Me section</li>
-              <li><i class="fas fa-check"></i> Education section</li>
-              <li><i class="fas fa-check"></i> Skills section</li>
-              <li><i class="fas fa-check"></i> 3 to 5 project showcases</li>
-              <li><i class="fas fa-check"></i> Achievement or certificate section</li>
-              <li><i class="fas fa-check"></i> Resume download button</li>
-              <li><i class="fas fa-check"></i> Basic GitHub setup guidance</li>
-              <li><i class="fas fa-check"></i> GitHub.io publishing</li>
-              <li><i class="fas fa-check"></i> 2 minor revisions</li>
-            </ul>
-            <a class="btn-outline-brand" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20the%20Project%20Portfolio%20Plus%20package%20%28RM129%29." target="_blank" rel="noopener">Ask About This</a>
-          </div>
-        </div>
-      </div>
-
-      <p class="pricing-note">
-        Note: Prices do not include paid domain, paid hosting, database system, login system, payment gateway or custom web application features.
-      </p>
-    </div>
-  </section>
-
-  <!-- GitHub.io Setup -->
-  <section id="github-setup" class="section-padding bg-soft">
-    <div class="container">
-      <div class="section-title">
-        <span>GitHub.io Setup</span>
-        <h2>How your GitHub.io portfolio link works</h2>
-        <p>The portfolio will be published under your own GitHub account, so the final link follows your GitHub username.</p>
-      </div>
-
-      <div class="row g-4 align-items-stretch">
-        <div class="col-lg-5">
-          <div class="github-demo">
-            <h3>Your own portfolio link</h3>
-            <p>If your GitHub username is professional and simple, your portfolio link will look clean and easy to share.</p>
-
-            <div class="link-example">
-              <small>GitHub username</small>
-              <strong>aisyahazmi</strong>
-            </div>
-
-            <div class="link-example">
-              <small>Portfolio link</small>
-              <strong>https://aisyahazmi.github.io</strong>
-            </div>
-
-            <div class="warning-box">
-              <i class="fas fa-shield-alt"></i>
-              No password sharing is required. You only add me as a collaborator for portfolio setup.
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="github-card">
-                <div class="icon-circle"><i class="fas fa-user-plus"></i></div>
-                <h3>1. Create GitHub Account</h3>
-                <p>You create your own GitHub account using a professional username.</p>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="github-card">
-                <div class="icon-circle"><i class="fas fa-folder-plus"></i></div>
-                <h3>2. Create Repository</h3>
-                <p>Create a repository named exactly like your username.github.io.</p>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="github-card">
-                <div class="icon-circle"><i class="fas fa-user-cog"></i></div>
-                <h3>3. Add Collaborator</h3>
-                <p>Add me as a collaborator so I can upload and set up your portfolio files.</p>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="github-card">
-                <div class="icon-circle"><i class="fas fa-rocket"></i></div>
-                <h3>4. Portfolio Goes Live</h3>
-                <p>Your online CV / portfolio will be published using your own GitHub.io link.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Add-ons -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="section-title">
-        <span>Add-ons</span>
-        <h2>Optional add-ons for extra requests</h2>
-        <p>Add-ons help keep the package fair if the portfolio needs more content, extra changes or future updates.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="addon-card">
-            <h3>Extra Project</h3>
-            <p>Add more project showcase beyond the selected package limit.</p>
-            <div class="addon-price">RM15+</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="addon-card">
-            <h3>Content Polishing</h3>
-            <p>Improve wording for About Me, project description or profile summary.</p>
-            <div class="addon-price">RM30+</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="addon-card">
-            <h3>Resume Touch-up</h3>
-            <p>Minor resume wording or layout improvement before adding it to the portfolio.</p>
-            <div class="addon-price">RM30+</div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="addon-card">
-            <h3>Future Update</h3>
-            <p>Update content later such as new project, new resume or new contact link.</p>
-            <div class="addon-price">RM20+</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" class="section-padding bg-soft">
-    <div class="container">
-      <div class="section-title">
-        <span>Process</span>
-        <h2>Simple process from inquiry to live portfolio</h2>
-        <p>The process is beginner-friendly, especially for students who are not familiar with GitHub.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <div class="step-number">1</div>
-            <h3>Choose Package</h3>
-            <p>Share your purpose, course/field and portfolio needs. I will suggest the most suitable package.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <div class="step-number">2</div>
-            <h3>Deposit & Content</h3>
-            <p>A 50% deposit is required before starting. Then you send resume, profile, skills, projects and links.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <div class="step-number">3</div>
-            <h3>GitHub Setup</h3>
-            <p>You create your GitHub account and add me as a collaborator. I will guide the setup step by step.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <div class="step-number">4</div>
-            <h3>Build & Publish</h3>
-            <p>I design, upload and publish your portfolio. After review and revision, final handover will be given.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="contact" class="section-small">
-    <div class="container">
-      <div class="cta-box">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <h2>Ready to create your student portfolio?</h2>
-            <p>Send your preferred package, course/field and purpose. I will suggest the best option for your internship or job application needs.</p>
-          </div>
-          <div class="col-lg-5">
-            <div class="cta-actions">
-              <a class="btn-whatsapp" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i> WhatsApp Me
-              </a>
-              <a class="btn-outline-brand" href="mailto:nurhidayah9501@gmail.com?subject=GitHub.io%20Student%20Portfolio%20Request&body=Hi%20Dayah%2C%0A%0AI%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%0APurpose%3A%0ACourse%2Ffield%3A%0AResume%20ready%3A%0A%0AThank%20you.">
-                <i class="fas fa-envelope"></i> Email Me
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section-padding bg-soft">
-    <div class="container">
-      <div class="section-title">
-        <span>FAQ</span>
-        <h2>Common questions before ordering</h2>
-        <p>Basic information students usually ask before creating a GitHub.io portfolio.</p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="faq-card">
-            <h3>Do I need a GitHub account?</h3>
-            <p>Yes. You need your own GitHub account so the portfolio link can use your own username, such as yourusername.github.io.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Do I need to share my GitHub password?</h3>
-            <p>No. You do not need to share your password. You only add me as a collaborator to help upload and set up the portfolio files.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Is there any monthly hosting fee?</h3>
-            <p>No. The portfolio will be published using GitHub Pages, so there is no monthly hosting fee for this package.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Can I use the link in my resume or internship application?</h3>
-            <p>Yes. You can add the GitHub.io link to your resume, LinkedIn profile, email signature, internship form or job application.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>What do I need to prepare?</h3>
-            <p>Please prepare your resume PDF, short profile, education details, skills list, project details, project screenshots if available, contact links and preferred design style.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Can I update my portfolio later?</h3>
-            <p>Yes. Future updates can be requested as an add-on, such as adding new projects, updating resume files, changing profile details or adding new links.</p>
-          </div>
-
-          <div class="faq-card">
-            <h3>Is this suitable for systems with login or database?</h3>
-            <p>No. This package is for static online CV and portfolio websites only. It does not include login systems, databases, payment gateways or advanced web application functions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-5">
-          <div class="footer-logo">
-            <img src="assets/images/logo.png" alt="Web Wizard Logo">
-            <span>Web Wizard</span>
-          </div>
-          <p>
-            Affordable GitHub.io online CV and portfolio website service for students, internship seekers and fresh graduates.
-          </p>
-        </div>
-
-        <div class="col-md-4 col-lg-2">
-          <h4>Menu</h4>
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#samples">Samples</a></li>
-            <li><a href="#pricing">Packages</a></li>
-            <li><a href="#github-setup">GitHub.io Setup</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4 col-lg-2">
-          <h4>Packages</h4>
-          <ul>
-            <li>Basic Online CV</li>
-            <li>Student Portfolio</li>
-            <li>Project Portfolio Plus</li>
-            <li>Future Updates</li>
-          </ul>
-        </div>
-
-        <div class="col-md-4 col-lg-3">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="https://wa.me/60125057046" target="_blank" rel="noopener">WhatsApp: 012-505 7046</a></li>
-            <li><a href="mailto:nurhidayah9501@gmail.com">nurhidayah9501@gmail.com</a></li>
-            <li>Ulu Tiram, Johor</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom text-center">
-        <p>© 2026 Web Wizard. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#top" aria-label="Web Wizard home"><span class="brand-mark"><span aria-hidden="true">ww</span><img src="assets/images/logo.png" alt="" data-logo></span><span class="brand-name">Web Wizard<small>By Nur Hidayah</small></span></a><p>Online CVs and portfolios for students taking their next step. Personal websites, thoughtfully made.</p></div><div><h3>Explore</h3><ul><li><a href="#services">Services</a></li><li><a href="#samples">Sample styles</a></li><li><a href="#pricing">Packages</a></li><li><a href="#github-setup">GitHub.io setup</a></li><li><a href="#process">How it works</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><h3>Say hello</h3><ul><li><a class="" href="https://wa.me/60125057046" target="_blank" rel="noopener noreferrer">WhatsApp: 012-505 7046</a></li><li><a href="mailto:nurhidayah9501@gmail.com">nurhidayah9501@gmail.com</a></li><li>Ulu Tiram, Johor</li><li><a href="#contact">Start your portfolio</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 Web Wizard. All rights reserved.</p><p>Your story. One beautiful link.</p></div></div></footer>
+  <div class="mobile-contact" aria-label="Quick contact"><span>Student packages<strong>From RM49</strong></span><a class="btn btn-navy" href="https://wa.me/60125057046?text=Hi%20Dayah%2C%20I%20am%20interested%20in%20creating%20a%20GitHub.io%20student%20portfolio.%0A%0APackage%20interested%3A%20%0APurpose%3A%20%0ACourse%2Ffield%3A%20%0ADo%20I%20have%20resume%20ready%3A%20" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a></div>
+  <script>
+    (() => {
+      'use strict';
+      const toggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('mainNavbar');
+      const menuIcon = toggle.querySelector('use');
+      const mobile = window.matchMedia('(max-width:900px)');
+      toggle.hidden = false;
+      function setMenu(open, focusToggle = false) {
+        nav.classList.toggle('is-open',open);
+        toggle.setAttribute('aria-expanded',String(open));
+        toggle.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation');
+        menuIcon.setAttribute('href',open ? '#icon-close' : '#icon-menu');
+        if (focusToggle) toggle.focus();
+      }
+      toggle.addEventListener('click',() => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav.addEventListener('click',event => { if (event.target.closest('a')) setMenu(false); });
+      document.addEventListener('click',event => { if (!event.target.closest('.site-header')) setMenu(false); });
+      document.addEventListener('keydown',event => {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setMenu(false,true);
+      });
+      mobile.addEventListener('change',() => setMenu(false));
+
+      const tabs = [...document.querySelectorAll('[data-preview]')];
+      const panels = [...document.querySelectorAll('.hero-preview')];
+      const previewLinks = ["https://nrhdyh.github.io/basic-cv/", "https://nrhdyh.github.io/it-data-portfolio/", "https://nrhdyh.github.io/internship-portfolio/"];
+      const liveSample = document.getElementById('heroLiveSample');
+      document.getElementById('previewTabs').hidden = false;
+      function selectPreview(index, focus = false) {
+        tabs.forEach((tab,i) => {
+          tab.setAttribute('aria-selected',String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+          panels[i].hidden = i !== index;
+        });
+        liveSample.setAttribute('href',previewLinks[index]);
+        if (focus) tabs[index].focus();
+      }
+      tabs.forEach((tab,index) => {
+        tab.addEventListener('click',() => selectPreview(index));
+        tab.addEventListener('keydown',event => {
+          let next = index;
+          if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+          else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = tabs.length - 1;
+          else return;
+          event.preventDefault(); selectPreview(next,true);
+        });
+      });
+
+      // Native details keep all explanations usable without JavaScript.
+      function revealHashTarget() {
+        if (!window.location.hash) return;
+        let id;
+        try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+        const target = document.getElementById(id);
+        if (!target) return;
+        let parent = target.parentElement;
+        while (parent) { if (parent.tagName === 'DETAILS') parent.open = true; parent = parent.parentElement; }
+        if (id === 'github-setup') target.querySelector('details').open = true;
+        target.closest('[data-reveal]')?.classList.add('is-visible');
+      }
+      document.querySelectorAll('a[href="#github-setup"]').forEach(link => link.addEventListener('click',() => {
+        document.querySelector('#github-setup details').open = true;
+      }));
+      window.addEventListener('hashchange',revealHashTarget);
+      revealHashTarget();
+
+      document.querySelectorAll('[data-logo]').forEach(img => {
+        const missing = () => { img.hidden = true; };
+        const loaded = () => { img.hidden = false; img.style.background = 'var(--paper)'; };
+        img.addEventListener('error',missing); img.addEventListener('load',loaded);
+        if (img.complete) img.naturalWidth ? loaded() : missing();
+      });
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)');
+      if ('IntersectionObserver' in window && !reducedMotion.matches) {
+        document.documentElement.classList.add('can-animate');
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+        }),{threshold:0.05,rootMargin:'0px 0px 30px 0px'});
+        document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+        reducedMotion.addEventListener('change',event => { if (event.matches) document.documentElement.classList.remove('can-animate'); });
+      }
+      document.addEventListener('focusin',event => {
+        event.target.closest('[data-reveal]')?.classList.add('is-visible');
+      });
+      const links = [...nav.querySelectorAll('.nav-link')];
+      const sections = links.map(link => ({link,section:document.querySelector(link.getAttribute('href'))}));
+      let scheduled = false;
+      function updateNavigation() {
+        let active = null;
+        sections.forEach(item => { if (item.section.getBoundingClientRect().top <= 150) active = item.link; });
+        if (document.getElementById('contact').getBoundingClientRect().top <= 150) active = null;
+        links.forEach(link => { if (link === active) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); });
+        scheduled = false;
+      }
+      window.addEventListener('scroll',() => { if (!scheduled) { scheduled = true; window.requestAnimationFrame(updateNavigation); } },{passive:true});
+      window.addEventListener('resize',updateNavigation);
+      updateNavigation();
+    })();
+  </script>
+  <noscript><style>@media(max-width:900px){.main-nav{display:flex;position:static;flex-wrap:wrap;gap:10px 18px;padding:10px 0;background:transparent;box-shadow:none;border:0;max-height:none;}.header-inner{flex-wrap:wrap;padding-block:14px;}.site-header{position:static;}}</style></noscript>
 </body>
 </html>
